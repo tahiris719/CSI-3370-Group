@@ -19,5 +19,18 @@ export const errorRoute: Routes = [
             pageTitle: 'DungeonsAndDatabases',
             error403: true
         }
+    },
+    {
+        path: '404',
+        component: ErrorComponent,
+        data: {
+            authorities: [],
+            pageTitle: 'DungeonsAndDatabases',
+            error404: true
+        }
+    },
+    {
+        path: '**',
+        redirectTo: '/404'
     }
 ];

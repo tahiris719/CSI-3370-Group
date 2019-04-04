@@ -7,7 +7,7 @@ import { LoginModalService, AccountService, Account } from 'app/core';
 @Component({
     selector: 'jhi-home',
     templateUrl: './home.component.html',
-    styleUrls: ['home.css']
+    styleUrls: ['home.scss']
 })
 export class HomeComponent implements OnInit {
     account: Account;
@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
     ) {}
 
     ngOnInit() {
-        this.accountService.identity().then(account => {
+        this.accountService.identity().then((account: Account) => {
             this.account = account;
         });
         this.registerAuthenticationSuccess();

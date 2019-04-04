@@ -42,7 +42,7 @@ spring:
             hibernate.connection.provider_disables_autocommit: true
             hibernate.cache.use_second_level_cache: false
             hibernate.cache.use_query_cache: false
-            hibernate.generate_statistics: true
+            hibernate.generate_statistics: false
             hibernate.hbm2ddl.auto: validate
             hibernate.jdbc.time_zone: UTC
     liquibase:
@@ -84,15 +84,11 @@ jhipster:
         from: test@localhost
         base-url: http://127.0.0.1:8080
     security:
-        authentication:
-            jwt:
-                # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-                base64-secret: N2UxMTQxYzM3MWNkNzBiODcxYjMwNTk1ZmU2NDIxY2U3N2UzYjBkNDJiMTY0ZTg1ZmJiNWE5ZjlhNDViMDgzZDIwYjBiODZlY2MyMzdiMmY4OGI2YWJlYTBkZmFmNjc4YTM1MTkwYjQ0N2YxN2I5YTAzNmEyZTliMTFmOWFmNjU=
-                # Token is valid 24 hours
-                token-validity-in-seconds: 86400
-    metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
-        jmx.enabled: true
-        logs: # Reports Dropwizard metrics in the logs
+        remember-me:
+            # security key (this key should be unique for your application, and kept secret)
+            key: 8d161fc8215320e59b6497df94cebc4e093bbfde122c39afc63d55ed7b322a13816717dc4016d471f5c884384c6ab45fbc10
+    metrics:
+        logs: # Reports metrics in the logs
             enabled: true
             report-frequency: 60 # in seconds
 
