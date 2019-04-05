@@ -1,0 +1,310 @@
+{
+    "name": "CharacterSheet",
+    "fields": [
+        {
+            "fieldName": "characterName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "charachterClass",
+            "fieldType": "CharacterClassEnum",
+            "fieldValues": "BARBARIAN,BARD,CLERIC,DRUID,FIGHTER,MONK,PALADIN,RANGER,ROGUE,SORCERER,WARLOCK,WIZARD"
+        },
+        {
+            "fieldName": "background",
+            "fieldType": "BackgroundEnum",
+            "fieldValues": "ACOLYTE,CHARLATAN,CRIMINAL,ENTERTAINER,FOLKHERO,GUILDARTISAN,HERMIT,NOBLE,OUTLANDER,SAGE,SAILOR,SOLDIER,URCHIN"
+        },
+        {
+            "fieldName": "playerName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "race",
+            "fieldType": "RaceEnum",
+            "fieldValues": "DWARF,ELF,HALFLING,HUMAN,DRAGONBORN,GNOME,HALF_ELF,HALF_ORC,TIEFLING"
+        },
+        {
+            "fieldName": "alignment",
+            "fieldType": "AlignmentEnum",
+            "fieldValues": "LAWFUL_GOOD,NUETRAL_GOOD,CHAOTIC_GOOD,LAWFUL_NUETRAL,TRUE_NUETRAL,CHAOTIC_NUETRAL,LAWFUL_EVIL,NEUTRAL_EVIL"
+        },
+        {
+            "fieldName": "experiencePoints",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "strength",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "dexterity",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "constitution",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "intelligence",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "wisdom",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "charisma",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "inspiration",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "proficiencyBounus",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "strengthSavingThrow",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "dexteritySavingThrow",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "constitutionSavingThrow",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "intelligenceSavingThrow",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "wisdomSavingThrow",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "charismaSavingThrow",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "acrobatics",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "animalHandeling",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "arcana",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "athletics",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "deception",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "history",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "insight",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "intimidation",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "investigation",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "medicine",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "nature",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "perception",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "performance",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "persuasion",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "religion",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "sleightOfHand",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "stealth",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "survival",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "passiveWisdomPerception",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "armorClass",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "initiative",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "speed",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hitPointMaximum",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "currentHitPoints",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "temporaryHitPoints",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hitDice",
+            "fieldType": "DiceEnum",
+            "fieldValues": "D4,D6,D8,D12,D10,D20"
+        },
+        {
+            "fieldName": "deathSaveSuccess",
+            "fieldType": "DeathSaveSuccessEnum",
+            "fieldValues": "ZERO,ONE,TWO,THREE"
+        },
+        {
+            "fieldName": "deathSaveFail",
+            "fieldType": "DeathSaveFailEnum",
+            "fieldValues": "ZERO,ONE,TWO,THREE"
+        },
+        {
+            "fieldName": "otherProficienciesAndLanguages",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "copperPieces",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "silverPieces",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "electrumPieces",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "goldPieces",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "platinumPieces",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "equipment",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "featuresAndTraits",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "attacksAndSpellCasting",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "alliesAndOrganizations",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "additionalFeaturesAndTraits",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "treasure",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "characterBackstory",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "age",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "height",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "weight",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "eyes",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "skin",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hair",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "spellCastingClass",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "spellCastingAbility",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "spellSaveDC",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "spellAttackBounus",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190405164734",
+    "entityTableName": "character_sheet",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
