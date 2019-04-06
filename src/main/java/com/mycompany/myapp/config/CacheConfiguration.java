@@ -41,6 +41,7 @@ public class CacheConfiguration {
             cm.createCache(com.mycompany.myapp.domain.PersistentToken.class.getName(), jcacheConfiguration);
             cm.createCache(com.mycompany.myapp.domain.User.class.getName() + ".persistentTokens", jcacheConfiguration);
             cm.createCache(com.mycompany.myapp.domain.CharacterSheet.class.getName(), jcacheConfiguration);
+            cm.createCache(com.mycompany.myapp.domain.Spells.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

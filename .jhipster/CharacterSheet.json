@@ -6,7 +6,7 @@
             "fieldType": "String"
         },
         {
-            "fieldName": "charachterClass",
+            "fieldName": "characterClass",
             "fieldType": "CharacterClassEnum",
             "fieldValues": "BARBARIAN,BARD,CLERIC,DRUID,FIGHTER,MONK,PALADIN,RANGER,ROGUE,SORCERER,WARLOCK,WIZARD"
         },

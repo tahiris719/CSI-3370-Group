@@ -1,0 +1,72 @@
+<div>
+    <h2 id="page-heading">
+        <span>Spells</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-spells" [routerLink]="['/spells/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new Spells
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="spells">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span>ID</span></th>
+            <th><span>Name</span></th>
+            <th><span>Book</span></th>
+            <th><span>Level</span></th>
+            <th><span>School</span></th>
+            <th><span>Time</span></th>
+            <th><span>Range</span></th>
+            <th><span>Components</span></th>
+            <th><span>Duration</span></th>
+            <th><span>Classes</span></th>
+            <th><span>Description</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let spells of spells ;trackBy: trackId">
+                <td><a [routerLink]="['/spells', spells.id, 'view' ]">{{spells.id}}</a></td>
+                <td>{{spells.name}}</td>
+                <td>{{spells.book}}</td>
+                <td>{{spells.level}}</td>
+                <td>{{spells.school}}</td>
+                <td>{{spells.time}}</td>
+                <td>{{spells.range}}</td>
+                <td>{{spells.components}}</td>
+                <td>{{spells.duration}}</td>
+                <td>{{spells.classes}}</td>
+                <td>{{spells.description}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/spells', spells.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/spells', spells.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'spells', { outlets: { popup: spells.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

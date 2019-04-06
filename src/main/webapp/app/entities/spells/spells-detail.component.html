@@ -1,0 +1,63 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="spells">
+            <h2><span>Spells</span> {{spells.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{spells.name}}</span>
+                </dd>
+                <dt><span>Book</span></dt>
+                <dd>
+                    <span>{{spells.book}}</span>
+                </dd>
+                <dt><span>Level</span></dt>
+                <dd>
+                    <span>{{spells.level}}</span>
+                </dd>
+                <dt><span>School</span></dt>
+                <dd>
+                    <span>{{spells.school}}</span>
+                </dd>
+                <dt><span>Time</span></dt>
+                <dd>
+                    <span>{{spells.time}}</span>
+                </dd>
+                <dt><span>Range</span></dt>
+                <dd>
+                    <span>{{spells.range}}</span>
+                </dd>
+                <dt><span>Components</span></dt>
+                <dd>
+                    <span>{{spells.components}}</span>
+                </dd>
+                <dt><span>Duration</span></dt>
+                <dd>
+                    <span>{{spells.duration}}</span>
+                </dd>
+                <dt><span>Classes</span></dt>
+                <dd>
+                    <span>{{spells.classes}}</span>
+                </dd>
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{spells.description}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/spells', spells.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -7,6 +7,14 @@ import { RouterModule } from '@angular/router';
             {
                 path: 'character-sheet',
                 loadChildren: './character-sheet/character-sheet.module#DungeonsAndDatabasesCharacterSheetModule'
+            },
+            {
+                path: 'spells',
+                loadChildren: './spells/spells.module#DungeonsAndDatabasesSpellsModule'
+            },
+            {
+                path: 'spells',
+                loadChildren: './spells/spells.module#DungeonsAndDatabasesSpellsModule'
             }
             /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
         ])
