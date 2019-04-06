@@ -181,8 +181,8 @@ public class CharacterSheet implements Serializable {
     @Column(name = "speed")
     private Integer speed;
 
-    @Column(name = "hp_maximum")
-    private Integer hpMaximum;
+    @Column(name = "max_hp")
+    private Integer maxHP;
 
     @Column(name = "current_hp")
     private Integer currentHP;
@@ -882,17 +882,17 @@ public class CharacterSheet implements Serializable {
         this.speed = speed;
     }
 
-    public Integer getHpMaximum() {
-        return hpMaximum;
+    public Integer getMaxHP() {
+        return maxHP;
     }
 
-    public CharacterSheet hpMaximum(Integer hpMaximum) {
-        this.hpMaximum = hpMaximum;
+    public CharacterSheet maxHP(Integer maxHP) {
+        this.maxHP = maxHP;
         return this;
     }
 
-    public void setHpMaximum(Integer hpMaximum) {
-        this.hpMaximum = hpMaximum;
+    public void setMaxHP(Integer maxHP) {
+        this.maxHP = maxHP;
     }
 
     public Integer getCurrentHP() {
@@ -1343,7 +1343,7 @@ public class CharacterSheet implements Serializable {
             ", armorClass=" + getArmorClass() +
             ", initiative=" + getInitiative() +
             ", speed=" + getSpeed() +
-            ", hpMaximum=" + getHpMaximum() +
+            ", maxHP=" + getMaxHP() +
             ", currentHP=" + getCurrentHP() +
             ", temporaryHP=" + getTemporaryHP() +
             ", hitDice='" + getHitDice() + "'" +

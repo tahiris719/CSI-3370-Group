@@ -206,7 +206,7 @@
                 <constraints nullable="true" />
             </column>
 
-            <column name="hp_maximum" type="integer">
+            <column name="max_hp" type="integer">
                 <constraints nullable="true" />
             </column>
 

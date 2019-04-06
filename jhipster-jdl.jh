@@ -1,45 +1,45 @@
 enum CharacterClassEnum{
-	BARBARIAN, BARD, CLERIC, DRUID, FIGHTER, MONK, PALADIN, RANGER, ROGUE, SORCERER, WARLOCK, WIZARD
+    BARBARIAN, BARD, CLERIC, DRUID, FIGHTER, MONK, PALADIN, RANGER, ROGUE, SORCERER, WARLOCK, WIZARD
 }
 
 enum BackgroundEnum{
-	ACOLYTE, CHARLATAN, CRIMINAL, ENTERTAINER, FOLKHERO, GUILDARTISAN, HERMIT, NOBLE, OUTLANDER, SAGE, SAILOR, SOLDIER, URCHIN
+    ACOLYTE, CHARLATAN, CRIMINAL, ENTERTAINER, FOLKHERO, GUILDARTISAN, HERMIT, NOBLE, OUTLANDER, SAGE, SAILOR, SOLDIER, URCHIN
 }
 
 enum RaceEnum{
-	DWARF, ELF, HALFLING, HUMAN, DRAGONBORN, GNOME, HALF_ELF, HALF_ORC, TIEFLING
+    DWARF, ELF, HALFLING, HUMAN, DRAGONBORN, GNOME, HALF_ELF, HALF_ORC, TIEFLING
 }
 
 enum AlignmentEnum{
-	LAWFUL_GOOD, NUETRAL_GOOD, CHAOTIC_GOOD,
+    LAWFUL_GOOD, NUETRAL_GOOD, CHAOTIC_GOOD,
     LAWFUL_NUETRAL, TRUE_NUETRAL, CHAOTIC_NUETRAL,
     LAWFUL_EVIL, NEUTRAL_EVIL, CHAOTIC_NUETRAL
 }
 
 enum DiceEnum{
-	D4, D6, D8, D12, D10, D20
+    D4, D6, D8, D12, D10, D20
 }
 
 enum DeathSaveSuccessEnum{
-	ZERO, ONE, TWO, THREE
+    ZERO, ONE, TWO, THREE
 }
 
 enum DeathSaveFailEnum{
-	ZERO, ONE, TWO, THREE
+    ZERO, ONE, TWO, THREE
 }
 
 entity CharacterSheet{
     createdDate String
     createdBy String
-	searchKeywords String
-	characterName String
+    searchKeywords String
+    characterName String
     characterClass CharacterClassEnum
     background BackgroundEnum
     playerName String
     race RaceEnum
-  	alignment AlignmentEnum
+      alignment AlignmentEnum
     expPoints Integer
-	strength Integer
+    strength Integer
     dexterity Integer
     constitution Integer
     intelligence Integer
@@ -75,7 +75,7 @@ entity CharacterSheet{
     armorClass Integer
     initiative Integer
     speed Integer
-    hpMaximum Integer
+    maxHP Integer
     currentHP Integer
     temporaryHP Integer
     hitDice DiceEnum
@@ -107,10 +107,10 @@ entity CharacterSheet{
 }
 
 entity SpellBook{
-	maxSpells Integer
+    maxSpells Integer
     spells String
 }
 
 relationship OneToOne{
-	CharacterSheet{character} to SpellBook
+    CharacterSheet{character} to SpellBook
 }

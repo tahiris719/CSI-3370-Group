@@ -189,8 +189,8 @@ public class CharacterSheetResourceIntTest {
     private static final Integer DEFAULT_SPEED = 1;
     private static final Integer UPDATED_SPEED = 2;
 
-    private static final Integer DEFAULT_HP_MAXIMUM = 1;
-    private static final Integer UPDATED_HP_MAXIMUM = 2;
+    private static final Integer DEFAULT_MAX_HP = 1;
+    private static final Integer UPDATED_MAX_HP = 2;
 
     private static final Integer DEFAULT_CURRENT_HP = 1;
     private static final Integer UPDATED_CURRENT_HP = 2;
@@ -372,7 +372,7 @@ public class CharacterSheetResourceIntTest {
             .armorClass(DEFAULT_ARMOR_CLASS)
             .initiative(DEFAULT_INITIATIVE)
             .speed(DEFAULT_SPEED)
-            .hpMaximum(DEFAULT_HP_MAXIMUM)
+            .maxHP(DEFAULT_MAX_HP)
             .currentHP(DEFAULT_CURRENT_HP)
             .temporaryHP(DEFAULT_TEMPORARY_HP)
             .hitDice(DEFAULT_HIT_DICE)
@@ -470,7 +470,7 @@ public class CharacterSheetResourceIntTest {
         assertThat(testCharacterSheet.getArmorClass()).isEqualTo(DEFAULT_ARMOR_CLASS);
         assertThat(testCharacterSheet.getInitiative()).isEqualTo(DEFAULT_INITIATIVE);
         assertThat(testCharacterSheet.getSpeed()).isEqualTo(DEFAULT_SPEED);
-        assertThat(testCharacterSheet.getHpMaximum()).isEqualTo(DEFAULT_HP_MAXIMUM);
+        assertThat(testCharacterSheet.getMaxHP()).isEqualTo(DEFAULT_MAX_HP);
         assertThat(testCharacterSheet.getCurrentHP()).isEqualTo(DEFAULT_CURRENT_HP);
         assertThat(testCharacterSheet.getTemporaryHP()).isEqualTo(DEFAULT_TEMPORARY_HP);
         assertThat(testCharacterSheet.getHitDice()).isEqualTo(DEFAULT_HIT_DICE);
@@ -583,7 +583,7 @@ public class CharacterSheetResourceIntTest {
             .andExpect(jsonPath("$.[*].armorClass").value(hasItem(DEFAULT_ARMOR_CLASS)))
             .andExpect(jsonPath("$.[*].initiative").value(hasItem(DEFAULT_INITIATIVE)))
             .andExpect(jsonPath("$.[*].speed").value(hasItem(DEFAULT_SPEED)))
-            .andExpect(jsonPath("$.[*].hpMaximum").value(hasItem(DEFAULT_HP_MAXIMUM)))
+            .andExpect(jsonPath("$.[*].maxHP").value(hasItem(DEFAULT_MAX_HP)))
             .andExpect(jsonPath("$.[*].currentHP").value(hasItem(DEFAULT_CURRENT_HP)))
             .andExpect(jsonPath("$.[*].temporaryHP").value(hasItem(DEFAULT_TEMPORARY_HP)))
             .andExpect(jsonPath("$.[*].hitDice").value(hasItem(DEFAULT_HIT_DICE.toString())))
@@ -671,7 +671,7 @@ public class CharacterSheetResourceIntTest {
             .andExpect(jsonPath("$.armorClass").value(DEFAULT_ARMOR_CLASS))
             .andExpect(jsonPath("$.initiative").value(DEFAULT_INITIATIVE))
             .andExpect(jsonPath("$.speed").value(DEFAULT_SPEED))
-            .andExpect(jsonPath("$.hpMaximum").value(DEFAULT_HP_MAXIMUM))
+            .andExpect(jsonPath("$.maxHP").value(DEFAULT_MAX_HP))
             .andExpect(jsonPath("$.currentHP").value(DEFAULT_CURRENT_HP))
             .andExpect(jsonPath("$.temporaryHP").value(DEFAULT_TEMPORARY_HP))
             .andExpect(jsonPath("$.hitDice").value(DEFAULT_HIT_DICE.toString()))
@@ -769,7 +769,7 @@ public class CharacterSheetResourceIntTest {
             .armorClass(UPDATED_ARMOR_CLASS)
             .initiative(UPDATED_INITIATIVE)
             .speed(UPDATED_SPEED)
-            .hpMaximum(UPDATED_HP_MAXIMUM)
+            .maxHP(UPDATED_MAX_HP)
             .currentHP(UPDATED_CURRENT_HP)
             .temporaryHP(UPDATED_TEMPORARY_HP)
             .hitDice(UPDATED_HIT_DICE)
@@ -854,7 +854,7 @@ public class CharacterSheetResourceIntTest {
         assertThat(testCharacterSheet.getArmorClass()).isEqualTo(UPDATED_ARMOR_CLASS);
         assertThat(testCharacterSheet.getInitiative()).isEqualTo(UPDATED_INITIATIVE);
         assertThat(testCharacterSheet.getSpeed()).isEqualTo(UPDATED_SPEED);
-        assertThat(testCharacterSheet.getHpMaximum()).isEqualTo(UPDATED_HP_MAXIMUM);
+        assertThat(testCharacterSheet.getMaxHP()).isEqualTo(UPDATED_MAX_HP);
         assertThat(testCharacterSheet.getCurrentHP()).isEqualTo(UPDATED_CURRENT_HP);
         assertThat(testCharacterSheet.getTemporaryHP()).isEqualTo(UPDATED_TEMPORARY_HP);
         assertThat(testCharacterSheet.getHitDice()).isEqualTo(UPDATED_HIT_DICE);
@@ -988,7 +988,7 @@ public class CharacterSheetResourceIntTest {
             .andExpect(jsonPath("$.[*].armorClass").value(hasItem(DEFAULT_ARMOR_CLASS)))
             .andExpect(jsonPath("$.[*].initiative").value(hasItem(DEFAULT_INITIATIVE)))
             .andExpect(jsonPath("$.[*].speed").value(hasItem(DEFAULT_SPEED)))
-            .andExpect(jsonPath("$.[*].hpMaximum").value(hasItem(DEFAULT_HP_MAXIMUM)))
+            .andExpect(jsonPath("$.[*].maxHP").value(hasItem(DEFAULT_MAX_HP)))
             .andExpect(jsonPath("$.[*].currentHP").value(hasItem(DEFAULT_CURRENT_HP)))
             .andExpect(jsonPath("$.[*].temporaryHP").value(hasItem(DEFAULT_TEMPORARY_HP)))
             .andExpect(jsonPath("$.[*].hitDice").value(hasItem(DEFAULT_HIT_DICE.toString())))

@@ -125,7 +125,7 @@ export interface ICharacterSheet {
     armorClass?: number;
     initiative?: number;
     speed?: number;
-    hpMaximum?: number;
+    maxHP?: number;
     currentHP?: number;
     temporaryHP?: number;
     hitDice?: DiceEnum;
@@ -206,7 +206,7 @@ export class CharacterSheet implements ICharacterSheet {
         public armorClass?: number,
         public initiative?: number,
         public speed?: number,
-        public hpMaximum?: number,
+        public maxHP?: number,
         public currentHP?: number,
         public temporaryHP?: number,
         public hitDice?: DiceEnum,

@@ -190,7 +190,7 @@
             "fieldType": "Integer"
         },
         {
-            "fieldName": "hpMaximum",
+            "fieldName": "maxHP",
             "fieldType": "Integer"
         },
         {
