@@ -1,3 +1,5 @@
+import { ISpellBook } from 'app/shared/model/spell-book.model';
+
 export const enum CharacterClassEnum {
     BARBARIAN = 'BARBARIAN',
     BARD = 'BARD',
@@ -77,13 +79,16 @@ export const enum DeathSaveFailEnum {
 
 export interface ICharacterSheet {
     id?: number;
+    createdDate?: string;
+    createdBy?: string;
+    searchKeywords?: string;
     characterName?: string;
-    charachterClass?: CharacterClassEnum;
+    characterClass?: CharacterClassEnum;
     background?: BackgroundEnum;
     playerName?: string;
     race?: RaceEnum;
     alignment?: AlignmentEnum;
-    experiencePoints?: number;
+    expPoints?: number;
     strength?: number;
     dexterity?: number;
     constitution?: number;
@@ -91,15 +96,15 @@ export interface ICharacterSheet {
     wisdom?: number;
     charisma?: number;
     inspiration?: number;
-    proficiencyBounus?: number;
-    strengthSavingThrow?: number;
-    dexteritySavingThrow?: number;
-    constitutionSavingThrow?: number;
-    intelligenceSavingThrow?: number;
-    wisdomSavingThrow?: number;
-    charismaSavingThrow?: number;
+    proficiencyBonus?: number;
+    strSavingThrow?: number;
+    dexSavingThrow?: number;
+    constSavingThrow?: number;
+    intSavingThrow?: number;
+    wisSavingThrow?: number;
+    charSavingThrow?: number;
     acrobatics?: number;
-    animalHandeling?: number;
+    animalHandling?: number;
     arcana?: number;
     athletics?: number;
     deception?: number;
@@ -120,9 +125,9 @@ export interface ICharacterSheet {
     armorClass?: number;
     initiative?: number;
     speed?: number;
-    hitPointMaximum?: number;
-    currentHitPoints?: number;
-    temporaryHitPoints?: number;
+    hpMaximum?: number;
+    currentHP?: number;
+    temporaryHP?: number;
     hitDice?: DiceEnum;
     deathSaveSuccess?: DeathSaveSuccessEnum;
     deathSaveFail?: DeathSaveFailEnum;
@@ -148,19 +153,23 @@ export interface ICharacterSheet {
     spellCastingClass?: string;
     spellCastingAbility?: number;
     spellSaveDC?: number;
-    spellAttackBounus?: number;
+    spellAttackBonus?: number;
+    character?: ISpellBook;
 }
 
 export class CharacterSheet implements ICharacterSheet {
     constructor(
         public id?: number,
+        public createdDate?: string,
+        public createdBy?: string,
+        public searchKeywords?: string,
         public characterName?: string,
-        public charachterClass?: CharacterClassEnum,
+        public characterClass?: CharacterClassEnum,
         public background?: BackgroundEnum,
         public playerName?: string,
         public race?: RaceEnum,
         public alignment?: AlignmentEnum,
-        public experiencePoints?: number,
+        public expPoints?: number,
         public strength?: number,
         public dexterity?: number,
         public constitution?: number,
@@ -168,15 +177,15 @@ export class CharacterSheet implements ICharacterSheet {
         public wisdom?: number,
         public charisma?: number,
         public inspiration?: number,
-        public proficiencyBounus?: number,
-        public strengthSavingThrow?: number,
-        public dexteritySavingThrow?: number,
-        public constitutionSavingThrow?: number,
-        public intelligenceSavingThrow?: number,
-        public wisdomSavingThrow?: number,
-        public charismaSavingThrow?: number,
+        public proficiencyBonus?: number,
+        public strSavingThrow?: number,
+        public dexSavingThrow?: number,
+        public constSavingThrow?: number,
+        public intSavingThrow?: number,
+        public wisSavingThrow?: number,
+        public charSavingThrow?: number,
         public acrobatics?: number,
-        public animalHandeling?: number,
+        public animalHandling?: number,
         public arcana?: number,
         public athletics?: number,
         public deception?: number,
@@ -197,9 +206,9 @@ export class CharacterSheet implements ICharacterSheet {
         public armorClass?: number,
         public initiative?: number,
         public speed?: number,
-        public hitPointMaximum?: number,
-        public currentHitPoints?: number,
-        public temporaryHitPoints?: number,
+        public hpMaximum?: number,
+        public currentHP?: number,
+        public temporaryHP?: number,
         public hitDice?: DiceEnum,
         public deathSaveSuccess?: DeathSaveSuccessEnum,
         public deathSaveFail?: DeathSaveFailEnum,
@@ -225,6 +234,7 @@ export class CharacterSheet implements ICharacterSheet {
         public spellCastingClass?: string,
         public spellCastingAbility?: number,
         public spellSaveDC?: number,
-        public spellAttackBounus?: number
+        public spellAttackBonus?: number,
+        public character?: ISpellBook
     ) {}
 }

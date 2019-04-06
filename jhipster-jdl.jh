@@ -1,35 +1,44 @@
-
 enum CharacterClassEnum{
 	BARBARIAN, BARD, CLERIC, DRUID, FIGHTER, MONK, PALADIN, RANGER, ROGUE, SORCERER, WARLOCK, WIZARD
 }
+
 enum BackgroundEnum{
 	ACOLYTE, CHARLATAN, CRIMINAL, ENTERTAINER, FOLKHERO, GUILDARTISAN, HERMIT, NOBLE, OUTLANDER, SAGE, SAILOR, SOLDIER, URCHIN
 }
+
 enum RaceEnum{
 	DWARF, ELF, HALFLING, HUMAN, DRAGONBORN, GNOME, HALF_ELF, HALF_ORC, TIEFLING
 }
+
 enum AlignmentEnum{
 	LAWFUL_GOOD, NUETRAL_GOOD, CHAOTIC_GOOD,
     LAWFUL_NUETRAL, TRUE_NUETRAL, CHAOTIC_NUETRAL,
     LAWFUL_EVIL, NEUTRAL_EVIL, CHAOTIC_NUETRAL
 }
+
 enum DiceEnum{
 	D4, D6, D8, D12, D10, D20
 }
+
 enum DeathSaveSuccessEnum{
 	ZERO, ONE, TWO, THREE
 }
+
 enum DeathSaveFailEnum{
 	ZERO, ONE, TWO, THREE
 }
+
 entity CharacterSheet{
+    createdDate String
+    createdBy String
+	searchKeywords String
 	characterName String
-    charachterClass CharacterClassEnum
+    characterClass CharacterClassEnum
     background BackgroundEnum
     playerName String
     race RaceEnum
   	alignment AlignmentEnum
-    experiencePoints Integer
+    expPoints Integer
 	strength Integer
     dexterity Integer
     constitution Integer
@@ -37,15 +46,15 @@ entity CharacterSheet{
     wisdom Integer
     charisma Integer
     inspiration Integer
-    proficiencyBounus Integer
-    strengthSavingThrow Integer
-    dexteritySavingThrow Integer
-    constitutionSavingThrow Integer
-    intelligenceSavingThrow Integer
-    wisdomSavingThrow Integer
-    charismaSavingThrow Integer
+    proficiencyBonus Integer
+    strSavingThrow Integer
+    dexSavingThrow Integer
+    constSavingThrow Integer
+    intSavingThrow Integer
+    wisSavingThrow Integer
+    charSavingThrow Integer
     acrobatics Integer
-    animalHandeling Integer
+    animalHandling Integer
     arcana Integer
     athletics Integer
     deception Integer
@@ -66,9 +75,9 @@ entity CharacterSheet{
     armorClass Integer
     initiative Integer
     speed Integer
-    hitPointMaximum Integer
-    currentHitPoints Integer
-    temporaryHitPoints Integer
+    hpMaximum Integer
+    currentHP Integer
+    temporaryHP Integer
     hitDice DiceEnum
     deathSaveSuccess DeathSaveSuccessEnum
     deathSaveFail DeathSaveFailEnum
@@ -94,5 +103,14 @@ entity CharacterSheet{
     spellCastingClass String
     spellCastingAbility Integer
     spellSaveDC Integer
-    spellAttackBounus Integer
+    spellAttackBonus Integer
+}
+
+entity SpellBook{
+	maxSpells Integer
+    spells String
+}
+
+relationship OneToOne{
+	CharacterSheet{character} to SpellBook
 }

@@ -10,13 +10,28 @@
                         [(ngModel)]="characterSheet.id" readonly />
                 </div>
                 <div class="form-group">
+                    <label class="form-control-label" for="field_createdDate">Created Date</label>
+                    <input type="text" class="form-control" name="createdDate" id="field_createdDate"
+                        [(ngModel)]="characterSheet.createdDate" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_createdBy">Created By</label>
+                    <input type="text" class="form-control" name="createdBy" id="field_createdBy"
+                        [(ngModel)]="characterSheet.createdBy" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_searchKeywords">Search Keywords</label>
+                    <input type="text" class="form-control" name="searchKeywords" id="field_searchKeywords"
+                        [(ngModel)]="characterSheet.searchKeywords" />
+                </div>
+                <div class="form-group">
                     <label class="form-control-label" for="field_characterName">Character Name</label>
                     <input type="text" class="form-control" name="characterName" id="field_characterName"
                         [(ngModel)]="characterSheet.characterName" />
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" for="field_charachterClass">Charachter Class</label>
-                    <select class="form-control" name="charachterClass" [(ngModel)]="characterSheet.charachterClass" id="field_charachterClass" >
+                    <label class="form-control-label" for="field_characterClass">Character Class</label>
+                    <select class="form-control" name="characterClass" [(ngModel)]="characterSheet.characterClass" id="field_characterClass" >
                         <option value="BARBARIAN">BARBARIAN</option>
                         <option value="BARD">BARD</option>
                         <option value="CLERIC">CLERIC</option>
@@ -82,9 +97,9 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" for="field_experiencePoints">Experience Points</label>
-                    <input type="number" class="form-control" name="experiencePoints" id="field_experiencePoints"
-                        [(ngModel)]="characterSheet.experiencePoints" />
+                    <label class="form-control-label" for="field_expPoints">Exp Points</label>
+                    <input type="number" class="form-control" name="expPoints" id="field_expPoints"
+                        [(ngModel)]="characterSheet.expPoints" />
                 </div>
                 <div class="form-group">
                     <label class="form-control-label" for="field_strength">Strength</label>
@@ -122,39 +137,39 @@
                         [(ngModel)]="characterSheet.inspiration" />
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" for="field_proficiencyBounus">Proficiency Bounus</label>
-                    <input type="number" class="form-control" name="proficiencyBounus" id="field_proficiencyBounus"
-                        [(ngModel)]="characterSheet.proficiencyBounus" />
+                    <label class="form-control-label" for="field_proficiencyBonus">Proficiency Bonus</label>
+                    <input type="number" class="form-control" name="proficiencyBonus" id="field_proficiencyBonus"
+                        [(ngModel)]="characterSheet.proficiencyBonus" />
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" for="field_strengthSavingThrow">Strength Saving Throw</label>
-                    <input type="number" class="form-control" name="strengthSavingThrow" id="field_strengthSavingThrow"
-                        [(ngModel)]="characterSheet.strengthSavingThrow" />
+                    <label class="form-control-label" for="field_strSavingThrow">Str Saving Throw</label>
+                    <input type="number" class="form-control" name="strSavingThrow" id="field_strSavingThrow"
+                        [(ngModel)]="characterSheet.strSavingThrow" />
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" for="field_dexteritySavingThrow">Dexterity Saving Throw</label>
-                    <input type="number" class="form-control" name="dexteritySavingThrow" id="field_dexteritySavingThrow"
-                        [(ngModel)]="characterSheet.dexteritySavingThrow" />
+                    <label class="form-control-label" for="field_dexSavingThrow">Dex Saving Throw</label>
+                    <input type="number" class="form-control" name="dexSavingThrow" id="field_dexSavingThrow"
+                        [(ngModel)]="characterSheet.dexSavingThrow" />
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" for="field_constitutionSavingThrow">Constitution Saving Throw</label>
-                    <input type="number" class="form-control" name="constitutionSavingThrow" id="field_constitutionSavingThrow"
-                        [(ngModel)]="characterSheet.constitutionSavingThrow" />
+                    <label class="form-control-label" for="field_constSavingThrow">Const Saving Throw</label>
+                    <input type="number" class="form-control" name="constSavingThrow" id="field_constSavingThrow"
+                        [(ngModel)]="characterSheet.constSavingThrow" />
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" for="field_intelligenceSavingThrow">Intelligence Saving Throw</label>
-                    <input type="number" class="form-control" name="intelligenceSavingThrow" id="field_intelligenceSavingThrow"
-                        [(ngModel)]="characterSheet.intelligenceSavingThrow" />
+                    <label class="form-control-label" for="field_intSavingThrow">Int Saving Throw</label>
+                    <input type="number" class="form-control" name="intSavingThrow" id="field_intSavingThrow"
+                        [(ngModel)]="characterSheet.intSavingThrow" />
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" for="field_wisdomSavingThrow">Wisdom Saving Throw</label>
-                    <input type="number" class="form-control" name="wisdomSavingThrow" id="field_wisdomSavingThrow"
-                        [(ngModel)]="characterSheet.wisdomSavingThrow" />
+                    <label class="form-control-label" for="field_wisSavingThrow">Wis Saving Throw</label>
+                    <input type="number" class="form-control" name="wisSavingThrow" id="field_wisSavingThrow"
+                        [(ngModel)]="characterSheet.wisSavingThrow" />
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" for="field_charismaSavingThrow">Charisma Saving Throw</label>
-                    <input type="number" class="form-control" name="charismaSavingThrow" id="field_charismaSavingThrow"
-                        [(ngModel)]="characterSheet.charismaSavingThrow" />
+                    <label class="form-control-label" for="field_charSavingThrow">Char Saving Throw</label>
+                    <input type="number" class="form-control" name="charSavingThrow" id="field_charSavingThrow"
+                        [(ngModel)]="characterSheet.charSavingThrow" />
                 </div>
                 <div class="form-group">
                     <label class="form-control-label" for="field_acrobatics">Acrobatics</label>
@@ -162,9 +177,9 @@
                         [(ngModel)]="characterSheet.acrobatics" />
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" for="field_animalHandeling">Animal Handeling</label>
-                    <input type="number" class="form-control" name="animalHandeling" id="field_animalHandeling"
-                        [(ngModel)]="characterSheet.animalHandeling" />
+                    <label class="form-control-label" for="field_animalHandling">Animal Handling</label>
+                    <input type="number" class="form-control" name="animalHandling" id="field_animalHandling"
+                        [(ngModel)]="characterSheet.animalHandling" />
                 </div>
                 <div class="form-group">
                     <label class="form-control-label" for="field_arcana">Arcana</label>
@@ -267,19 +282,19 @@
                         [(ngModel)]="characterSheet.speed" />
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" for="field_hitPointMaximum">Hit Point Maximum</label>
-                    <input type="number" class="form-control" name="hitPointMaximum" id="field_hitPointMaximum"
-                        [(ngModel)]="characterSheet.hitPointMaximum" />
+                    <label class="form-control-label" for="field_hpMaximum">Hp Maximum</label>
+                    <input type="number" class="form-control" name="hpMaximum" id="field_hpMaximum"
+                        [(ngModel)]="characterSheet.hpMaximum" />
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" for="field_currentHitPoints">Current Hit Points</label>
-                    <input type="number" class="form-control" name="currentHitPoints" id="field_currentHitPoints"
-                        [(ngModel)]="characterSheet.currentHitPoints" />
+                    <label class="form-control-label" for="field_currentHP">Current HP</label>
+                    <input type="number" class="form-control" name="currentHP" id="field_currentHP"
+                        [(ngModel)]="characterSheet.currentHP" />
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" for="field_temporaryHitPoints">Temporary Hit Points</label>
-                    <input type="number" class="form-control" name="temporaryHitPoints" id="field_temporaryHitPoints"
-                        [(ngModel)]="characterSheet.temporaryHitPoints" />
+                    <label class="form-control-label" for="field_temporaryHP">Temporary HP</label>
+                    <input type="number" class="form-control" name="temporaryHP" id="field_temporaryHP"
+                        [(ngModel)]="characterSheet.temporaryHP" />
                 </div>
                 <div class="form-group">
                     <label class="form-control-label" for="field_hitDice">Hit Dice</label>
@@ -421,11 +436,18 @@
                         [(ngModel)]="characterSheet.spellSaveDC" />
                 </div>
                 <div class="form-group">
-                    <label class="form-control-label" for="field_spellAttackBounus">Spell Attack Bounus</label>
-                    <input type="number" class="form-control" name="spellAttackBounus" id="field_spellAttackBounus"
-                        [(ngModel)]="characterSheet.spellAttackBounus" />
+                    <label class="form-control-label" for="field_spellAttackBonus">Spell Attack Bonus</label>
+                    <input type="number" class="form-control" name="spellAttackBonus" id="field_spellAttackBonus"
+                        [(ngModel)]="characterSheet.spellAttackBonus" />
                 </div>
 
+                <div class="form-group">
+                    <label class="form-control-label" for="field_character">Character</label>
+                    <select class="form-control" id="field_character" name="character" [(ngModel)]="characterSheet.character">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="spellBookOption.id === characterSheet.character?.id ? characterSheet.character : spellBookOption" *ngFor="let spellBookOption of characters; trackBy: trackSpellBookById">{{spellBookOption.id}}</option>
+                    </select>
+                </div>
             </div>
             <div>
                 <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">

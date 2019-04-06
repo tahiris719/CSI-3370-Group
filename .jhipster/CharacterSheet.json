@@ -2,11 +2,23 @@
     "name": "CharacterSheet",
     "fields": [
         {
+            "fieldName": "createdDate",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "searchKeywords",
+            "fieldType": "String"
+        },
+        {
             "fieldName": "characterName",
             "fieldType": "String"
         },
         {
-            "fieldName": "charachterClass",
+            "fieldName": "characterClass",
             "fieldType": "CharacterClassEnum",
             "fieldValues": "BARBARIAN,BARD,CLERIC,DRUID,FIGHTER,MONK,PALADIN,RANGER,ROGUE,SORCERER,WARLOCK,WIZARD"
         },
@@ -30,7 +42,7 @@
             "fieldValues": "LAWFUL_GOOD,NUETRAL_GOOD,CHAOTIC_GOOD,LAWFUL_NUETRAL,TRUE_NUETRAL,CHAOTIC_NUETRAL,LAWFUL_EVIL,NEUTRAL_EVIL"
         },
         {
-            "fieldName": "experiencePoints",
+            "fieldName": "expPoints",
             "fieldType": "Integer"
         },
         {
@@ -62,31 +74,31 @@
             "fieldType": "Integer"
         },
         {
-            "fieldName": "proficiencyBounus",
+            "fieldName": "proficiencyBonus",
             "fieldType": "Integer"
         },
         {
-            "fieldName": "strengthSavingThrow",
+            "fieldName": "strSavingThrow",
             "fieldType": "Integer"
         },
         {
-            "fieldName": "dexteritySavingThrow",
+            "fieldName": "dexSavingThrow",
             "fieldType": "Integer"
         },
         {
-            "fieldName": "constitutionSavingThrow",
+            "fieldName": "constSavingThrow",
             "fieldType": "Integer"
         },
         {
-            "fieldName": "intelligenceSavingThrow",
+            "fieldName": "intSavingThrow",
             "fieldType": "Integer"
         },
         {
-            "fieldName": "wisdomSavingThrow",
+            "fieldName": "wisSavingThrow",
             "fieldType": "Integer"
         },
         {
-            "fieldName": "charismaSavingThrow",
+            "fieldName": "charSavingThrow",
             "fieldType": "Integer"
         },
         {
@@ -94,7 +106,7 @@
             "fieldType": "Integer"
         },
         {
-            "fieldName": "animalHandeling",
+            "fieldName": "animalHandling",
             "fieldType": "Integer"
         },
         {
@@ -178,15 +190,15 @@
             "fieldType": "Integer"
         },
         {
-            "fieldName": "hitPointMaximum",
+            "fieldName": "hpMaximum",
             "fieldType": "Integer"
         },
         {
-            "fieldName": "currentHitPoints",
+            "fieldName": "currentHP",
             "fieldType": "Integer"
         },
         {
-            "fieldName": "temporaryHitPoints",
+            "fieldName": "temporaryHP",
             "fieldType": "Integer"
         },
         {
@@ -293,12 +305,21 @@
             "fieldType": "Integer"
         },
         {
-            "fieldName": "spellAttackBounus",
+            "fieldName": "spellAttackBonus",
             "fieldType": "Integer"
         }
     ],
-    "relationships": [],
-    "changelogDate": "20190405164734",
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "spellBook",
+            "otherEntityRelationshipName": "characterSheet",
+            "relationshipName": "character",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20190406175814",
     "entityTableName": "character_sheet",
     "dto": "no",
     "pagination": "no",

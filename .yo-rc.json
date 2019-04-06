@@ -1,35 +1,40 @@
 {
-    "generator-jhipster": {
-        "promptValues": {
-            "packageName": "com.mycompany.myapp"
-        },
-        "jhipsterVersion": "5.8.2",
-        "applicationType": "monolith",
-        "baseName": "DungeonsAndDatabases",
-        "packageName": "com.mycompany.myapp",
-        "packageFolder": "com/mycompany/myapp",
-        "serverPort": "8080",
-        "authenticationType": "session",
-        "cacheProvider": "ehcache",
-        "enableHibernateCache": true,
-        "websocket": false,
-        "databaseType": "sql",
-        "devDatabaseType": "h2Disk",
-        "prodDatabaseType": "mysql",
-        "searchEngine": false,
-        "messageBroker": false,
-        "serviceDiscoveryType": false,
-        "buildTool": "maven",
-        "enableSwaggerCodegen": false,
-        "rememberMeKey": "8d161fc8215320e59b6497df94cebc4e093bbfde122c39afc63d55ed7b322a13816717dc4016d471f5c884384c6ab45fbc10",
-        "clientFramework": "angularX",
-        "useSass": true,
-        "clientPackageManager": "npm",
-        "testFrameworks": [],
-        "jhiPrefix": "jhi",
-        "entitySuffix": "",
-        "dtoSuffix": "DTO",
-        "otherModules": [],
-        "enableTranslation": false
-    }
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.csi3370.dnd"
+    },
+    "jhipsterVersion": "5.8.2",
+    "applicationType": "monolith",
+    "baseName": "DungeonsAndDatabases",
+    "packageName": "com.csi3370.dnd",
+    "packageFolder": "com/csi3370/dnd",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": "kafka",
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NzQ1OWQ0YTVjZGQ3NGU2ZmRmYzEzYzA0NjcwOGMxNTZiNmY1MGEzZDcxMTY0ZWFjM2JhM2I2OTRkODQ4NzkxYmMwNzc5ZDk0NDVmNzBmYmVkNWEwZDQzYzI2ZmFhMTkzYjExZDBkNWZhNTlmNzZhOGRiYmFkYzUzYzFlODIxNzA=",
+    "clientFramework": "angularX",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-spring-cloud-stream",
+        "version": "1.0.0"
+      }
+    ],
+    "enableTranslation": false
+  }
 }

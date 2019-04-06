@@ -16,7 +16,7 @@
 logging:
     level:
         ROOT: INFO
-        com.mycompany.myapp: INFO
+        com.csi3370.dnd: INFO
         io.github.jhipster: INFO
 
 spring:
@@ -25,6 +25,15 @@ spring:
             enabled: false
         livereload:
             enabled: false
+    cloud:
+        stream:
+            kafka:
+                binder:
+                    brokers: localhost
+                    zk-nodes: localhost
+            bindings:
+                output:
+                    destination: topic-jhipster
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
         url: jdbc:mysql://localhost:3306/DungeonsAndDatabases?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
@@ -49,6 +58,9 @@ spring:
             hibernate.cache.use_query_cache: false
             hibernate.generate_statistics: true
             hibernate.cache.region.factory_class: io.github.jhipster.config.jcache.BeanClassLoaderAwareJCacheRegionFactory
+    data:
+        jest:
+            uri: http://localhost:9200
     liquibase:
         contexts: prod
     mail:
@@ -101,9 +113,17 @@ jhipster:
             time-to-live-seconds: 3600 # By default objects stay 1 hour in the cache
             max-entries: 1000 # Number of objects in each cache entry
     security:
-        remember-me:
-            # security key (this key should be unique for your application, and kept secret)
-            key: 8d161fc8215320e59b6497df94cebc4e093bbfde122c39afc63d55ed7b322a13816717dc4016d471f5c884384c6ab45fbc10
+        authentication:
+            jwt:
+                # This token must be encoded using Base64 and be at least 256 bits long (you can type `openssl rand -base64 64` on your command line to generate a 512 bits one)
+                # As this is the PRODUCTION configuration, you MUST change the default key, and store it securely:
+                # - In the JHipster Registry (which includes a Spring Cloud Config server)
+                # - In a separate `application-prod.yml` file, in the same folder as your executable WAR file
+                # - In the `JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET` environment variable
+                base64-secret: NzQ1OWQ0YTVjZGQ3NGU2ZmRmYzEzYzA0NjcwOGMxNTZiNmY1MGEzZDcxMTY0ZWFjM2JhM2I2OTRkODQ4NzkxYmMwNzc5ZDk0NDVmNzBmYmVkNWEwZDQzYzI2ZmFhMTkzYjExZDBkNWZhNTlmNzZhOGRiYmFkYzUzYzFlODIxNzA=
+                # Token is valid 24 hours
+                token-validity-in-seconds: 86400
+                token-validity-in-seconds-for-remember-me: 2592000
     mail: # specific JHipster mail property, for standard properties see MailProperties
         from: DungeonsAndDatabases@localhost
         base-url: http://my-server-url-to-change # Modify according to your server's URL

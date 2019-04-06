@@ -30,6 +30,8 @@
         "ngx-webstorage": "2.0.1",
         "rxjs": "6.4.0",
         "swagger-ui": "2.2.10",
+        "sockjs-client": "1.3.0",
+        "webstomp-client": "1.2.6",
         "tslib": "1.9.3",
         "zone.js": "0.8.29"
     },
@@ -80,6 +82,7 @@
         "sass-loader": "7.1.0",
         "postcss-loader": "3.0.0",
         "xml2js": "0.4.19",
+        "generator-jhipster-spring-cloud-stream": "1.0.0",
         "webpack": "4.29.3",
         "webpack-cli": "3.2.3",
         "webpack-dev-server": "3.1.14",

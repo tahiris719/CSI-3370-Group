@@ -3,25 +3,43 @@
         <span>Character Sheets</span>
         <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-character-sheet" [routerLink]="['/character-sheet/new']">
             <fa-icon [icon]="'plus'"></fa-icon>
-            <span >
+            <span class="hidden-sm-down" >
             Create new Character Sheet
             </span>
         </button>
     </h2>
     <jhi-alert></jhi-alert>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="Query">
+                    <button class="input-group-append btn btn-info" (click)="search(currentSearch)">
+                        <fa-icon [icon]="'search'"></fa-icon>
+                    </button>
+                    <button class="input-group-append btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <fa-icon [icon]="'trash-alt'"></fa-icon>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
     <br/>
     <div class="table-responsive" *ngIf="characterSheets">
         <table class="table table-striped">
             <thead>
             <tr>
             <th><span>ID</span></th>
+            <th><span>Created Date</span></th>
+            <th><span>Created By</span></th>
+            <th><span>Search Keywords</span></th>
             <th><span>Character Name</span></th>
-            <th><span>Charachter Class</span></th>
+            <th><span>Character Class</span></th>
             <th><span>Background</span></th>
             <th><span>Player Name</span></th>
             <th><span>Race</span></th>
             <th><span>Alignment</span></th>
-            <th><span>Experience Points</span></th>
+            <th><span>Exp Points</span></th>
             <th><span>Strength</span></th>
             <th><span>Dexterity</span></th>
             <th><span>Constitution</span></th>
@@ -29,15 +47,15 @@
             <th><span>Wisdom</span></th>
             <th><span>Charisma</span></th>
             <th><span>Inspiration</span></th>
-            <th><span>Proficiency Bounus</span></th>
-            <th><span>Strength Saving Throw</span></th>
-            <th><span>Dexterity Saving Throw</span></th>
-            <th><span>Constitution Saving Throw</span></th>
-            <th><span>Intelligence Saving Throw</span></th>
-            <th><span>Wisdom Saving Throw</span></th>
-            <th><span>Charisma Saving Throw</span></th>
+            <th><span>Proficiency Bonus</span></th>
+            <th><span>Str Saving Throw</span></th>
+            <th><span>Dex Saving Throw</span></th>
+            <th><span>Const Saving Throw</span></th>
+            <th><span>Int Saving Throw</span></th>
+            <th><span>Wis Saving Throw</span></th>
+            <th><span>Char Saving Throw</span></th>
             <th><span>Acrobatics</span></th>
-            <th><span>Animal Handeling</span></th>
+            <th><span>Animal Handling</span></th>
             <th><span>Arcana</span></th>
             <th><span>Athletics</span></th>
             <th><span>Deception</span></th>
@@ -58,9 +76,9 @@
             <th><span>Armor Class</span></th>
             <th><span>Initiative</span></th>
             <th><span>Speed</span></th>
-            <th><span>Hit Point Maximum</span></th>
-            <th><span>Current Hit Points</span></th>
-            <th><span>Temporary Hit Points</span></th>
+            <th><span>Hp Maximum</span></th>
+            <th><span>Current HP</span></th>
+            <th><span>Temporary HP</span></th>
             <th><span>Hit Dice</span></th>
             <th><span>Death Save Success</span></th>
             <th><span>Death Save Fail</span></th>
@@ -86,20 +104,24 @@
             <th><span>Spell Casting Class</span></th>
             <th><span>Spell Casting Ability</span></th>
             <th><span>Spell Save DC</span></th>
-            <th><span>Spell Attack Bounus</span></th>
+            <th><span>Spell Attack Bonus</span></th>
+            <th><span>Character</span></th>
             <th></th>
             </tr>
             </thead>
             <tbody>
             <tr *ngFor="let characterSheet of characterSheets ;trackBy: trackId">
                 <td><a [routerLink]="['/character-sheet', characterSheet.id, 'view' ]">{{characterSheet.id}}</a></td>
+                <td>{{characterSheet.createdDate}}</td>
+                <td>{{characterSheet.createdBy}}</td>
+                <td>{{characterSheet.searchKeywords}}</td>
                 <td>{{characterSheet.characterName}}</td>
-                <td>{{characterSheet.charachterClass}}</td>
+                <td>{{characterSheet.characterClass}}</td>
                 <td>{{characterSheet.background}}</td>
                 <td>{{characterSheet.playerName}}</td>
                 <td>{{characterSheet.race}}</td>
                 <td>{{characterSheet.alignment}}</td>
-                <td>{{characterSheet.experiencePoints}}</td>
+                <td>{{characterSheet.expPoints}}</td>
                 <td>{{characterSheet.strength}}</td>
                 <td>{{characterSheet.dexterity}}</td>
                 <td>{{characterSheet.constitution}}</td>
@@ -107,15 +129,15 @@
                 <td>{{characterSheet.wisdom}}</td>
                 <td>{{characterSheet.charisma}}</td>
                 <td>{{characterSheet.inspiration}}</td>
-                <td>{{characterSheet.proficiencyBounus}}</td>
-                <td>{{characterSheet.strengthSavingThrow}}</td>
-                <td>{{characterSheet.dexteritySavingThrow}}</td>
-                <td>{{characterSheet.constitutionSavingThrow}}</td>
-                <td>{{characterSheet.intelligenceSavingThrow}}</td>
-                <td>{{characterSheet.wisdomSavingThrow}}</td>
-                <td>{{characterSheet.charismaSavingThrow}}</td>
+                <td>{{characterSheet.proficiencyBonus}}</td>
+                <td>{{characterSheet.strSavingThrow}}</td>
+                <td>{{characterSheet.dexSavingThrow}}</td>
+                <td>{{characterSheet.constSavingThrow}}</td>
+                <td>{{characterSheet.intSavingThrow}}</td>
+                <td>{{characterSheet.wisSavingThrow}}</td>
+                <td>{{characterSheet.charSavingThrow}}</td>
                 <td>{{characterSheet.acrobatics}}</td>
-                <td>{{characterSheet.animalHandeling}}</td>
+                <td>{{characterSheet.animalHandling}}</td>
                 <td>{{characterSheet.arcana}}</td>
                 <td>{{characterSheet.athletics}}</td>
                 <td>{{characterSheet.deception}}</td>
@@ -136,9 +158,9 @@
                 <td>{{characterSheet.armorClass}}</td>
                 <td>{{characterSheet.initiative}}</td>
                 <td>{{characterSheet.speed}}</td>
-                <td>{{characterSheet.hitPointMaximum}}</td>
-                <td>{{characterSheet.currentHitPoints}}</td>
-                <td>{{characterSheet.temporaryHitPoints}}</td>
+                <td>{{characterSheet.hpMaximum}}</td>
+                <td>{{characterSheet.currentHP}}</td>
+                <td>{{characterSheet.temporaryHP}}</td>
                 <td>{{characterSheet.hitDice}}</td>
                 <td>{{characterSheet.deathSaveSuccess}}</td>
                 <td>{{characterSheet.deathSaveFail}}</td>
@@ -164,7 +186,12 @@
                 <td>{{characterSheet.spellCastingClass}}</td>
                 <td>{{characterSheet.spellCastingAbility}}</td>
                 <td>{{characterSheet.spellSaveDC}}</td>
-                <td>{{characterSheet.spellAttackBounus}}</td>
+                <td>{{characterSheet.spellAttackBonus}}</td>
+                <td>
+                    <div *ngIf="characterSheet.character">
+                        <a [routerLink]="['../spell-book', characterSheet.character?.id, 'view' ]" >{{characterSheet.character?.id}}</a>
+                    </div>
+                </td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
                         <button type="submit"

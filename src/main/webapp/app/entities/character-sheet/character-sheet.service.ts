@@ -12,6 +12,7 @@ type EntityArrayResponseType = HttpResponse<ICharacterSheet[]>;
 @Injectable({ providedIn: 'root' })
 export class CharacterSheetService {
     public resourceUrl = SERVER_API_URL + 'api/character-sheets';
+    public resourceSearchUrl = SERVER_API_URL + 'api/_search/character-sheets';
 
     constructor(protected http: HttpClient) {}
 
@@ -34,5 +35,10 @@ export class CharacterSheetService {
 
     delete(id: number): Observable<HttpResponse<any>> {
         return this.http.delete<any>(`${this.resourceUrl}/${id}`, { observe: 'response' });
+    }
+
+    search(req?: any): Observable<EntityArrayResponseType> {
+        const options = createRequestOption(req);
+        return this.http.get<ICharacterSheet[]>(this.resourceSearchUrl, { params: options, observe: 'response' });
     }
 }

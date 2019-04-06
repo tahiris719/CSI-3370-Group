@@ -5,13 +5,25 @@
             <hr>
             <jhi-alert-error></jhi-alert-error>
             <dl class="row-md jh-entity-details">
+                <dt><span>Created Date</span></dt>
+                <dd>
+                    <span>{{characterSheet.createdDate}}</span>
+                </dd>
+                <dt><span>Created By</span></dt>
+                <dd>
+                    <span>{{characterSheet.createdBy}}</span>
+                </dd>
+                <dt><span>Search Keywords</span></dt>
+                <dd>
+                    <span>{{characterSheet.searchKeywords}}</span>
+                </dd>
                 <dt><span>Character Name</span></dt>
                 <dd>
                     <span>{{characterSheet.characterName}}</span>
                 </dd>
-                <dt><span>Charachter Class</span></dt>
+                <dt><span>Character Class</span></dt>
                 <dd>
-                    <span>{{characterSheet.charachterClass}}</span>
+                    <span>{{characterSheet.characterClass}}</span>
                 </dd>
                 <dt><span>Background</span></dt>
                 <dd>
@@ -29,9 +41,9 @@
                 <dd>
                     <span>{{characterSheet.alignment}}</span>
                 </dd>
-                <dt><span>Experience Points</span></dt>
+                <dt><span>Exp Points</span></dt>
                 <dd>
-                    <span>{{characterSheet.experiencePoints}}</span>
+                    <span>{{characterSheet.expPoints}}</span>
                 </dd>
                 <dt><span>Strength</span></dt>
                 <dd>
@@ -61,41 +73,41 @@
                 <dd>
                     <span>{{characterSheet.inspiration}}</span>
                 </dd>
-                <dt><span>Proficiency Bounus</span></dt>
+                <dt><span>Proficiency Bonus</span></dt>
                 <dd>
-                    <span>{{characterSheet.proficiencyBounus}}</span>
+                    <span>{{characterSheet.proficiencyBonus}}</span>
                 </dd>
-                <dt><span>Strength Saving Throw</span></dt>
+                <dt><span>Str Saving Throw</span></dt>
                 <dd>
-                    <span>{{characterSheet.strengthSavingThrow}}</span>
+                    <span>{{characterSheet.strSavingThrow}}</span>
                 </dd>
-                <dt><span>Dexterity Saving Throw</span></dt>
+                <dt><span>Dex Saving Throw</span></dt>
                 <dd>
-                    <span>{{characterSheet.dexteritySavingThrow}}</span>
+                    <span>{{characterSheet.dexSavingThrow}}</span>
                 </dd>
-                <dt><span>Constitution Saving Throw</span></dt>
+                <dt><span>Const Saving Throw</span></dt>
                 <dd>
-                    <span>{{characterSheet.constitutionSavingThrow}}</span>
+                    <span>{{characterSheet.constSavingThrow}}</span>
                 </dd>
-                <dt><span>Intelligence Saving Throw</span></dt>
+                <dt><span>Int Saving Throw</span></dt>
                 <dd>
-                    <span>{{characterSheet.intelligenceSavingThrow}}</span>
+                    <span>{{characterSheet.intSavingThrow}}</span>
                 </dd>
-                <dt><span>Wisdom Saving Throw</span></dt>
+                <dt><span>Wis Saving Throw</span></dt>
                 <dd>
-                    <span>{{characterSheet.wisdomSavingThrow}}</span>
+                    <span>{{characterSheet.wisSavingThrow}}</span>
                 </dd>
-                <dt><span>Charisma Saving Throw</span></dt>
+                <dt><span>Char Saving Throw</span></dt>
                 <dd>
-                    <span>{{characterSheet.charismaSavingThrow}}</span>
+                    <span>{{characterSheet.charSavingThrow}}</span>
                 </dd>
                 <dt><span>Acrobatics</span></dt>
                 <dd>
                     <span>{{characterSheet.acrobatics}}</span>
                 </dd>
-                <dt><span>Animal Handeling</span></dt>
+                <dt><span>Animal Handling</span></dt>
                 <dd>
-                    <span>{{characterSheet.animalHandeling}}</span>
+                    <span>{{characterSheet.animalHandling}}</span>
                 </dd>
                 <dt><span>Arcana</span></dt>
                 <dd>
@@ -177,17 +189,17 @@
                 <dd>
                     <span>{{characterSheet.speed}}</span>
                 </dd>
-                <dt><span>Hit Point Maximum</span></dt>
+                <dt><span>Hp Maximum</span></dt>
                 <dd>
-                    <span>{{characterSheet.hitPointMaximum}}</span>
+                    <span>{{characterSheet.hpMaximum}}</span>
                 </dd>
-                <dt><span>Current Hit Points</span></dt>
+                <dt><span>Current HP</span></dt>
                 <dd>
-                    <span>{{characterSheet.currentHitPoints}}</span>
+                    <span>{{characterSheet.currentHP}}</span>
                 </dd>
-                <dt><span>Temporary Hit Points</span></dt>
+                <dt><span>Temporary HP</span></dt>
                 <dd>
-                    <span>{{characterSheet.temporaryHitPoints}}</span>
+                    <span>{{characterSheet.temporaryHP}}</span>
                 </dd>
                 <dt><span>Hit Dice</span></dt>
                 <dd>
@@ -289,9 +301,15 @@
                 <dd>
                     <span>{{characterSheet.spellSaveDC}}</span>
                 </dd>
-                <dt><span>Spell Attack Bounus</span></dt>
+                <dt><span>Spell Attack Bonus</span></dt>
                 <dd>
-                    <span>{{characterSheet.spellAttackBounus}}</span>
+                    <span>{{characterSheet.spellAttackBonus}}</span>
+                </dd>
+                <dt><span>Character</span></dt>
+                <dd>
+                    <div *ngIf="characterSheet.character">
+                        <a [routerLink]="['/spell-book', characterSheet.character?.id, 'view']">{{characterSheet.character?.id}}</a>
+                    </div>
                 </dd>
             </dl>
 
