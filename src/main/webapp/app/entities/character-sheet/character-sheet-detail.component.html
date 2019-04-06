@@ -1,0 +1,329 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="characterSheet">
+            <h2><span>Character Sheet</span> {{characterSheet.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Created Date</span></dt>
+                <dd>
+                    <span>{{characterSheet.createdDate}}</span>
+                </dd>
+                <dt><span>Created By</span></dt>
+                <dd>
+                    <span>{{characterSheet.createdBy}}</span>
+                </dd>
+                <dt><span>Search Keywords</span></dt>
+                <dd>
+                    <span>{{characterSheet.searchKeywords}}</span>
+                </dd>
+                <dt><span>Character Name</span></dt>
+                <dd>
+                    <span>{{characterSheet.characterName}}</span>
+                </dd>
+                <dt><span>Character Class</span></dt>
+                <dd>
+                    <span>{{characterSheet.characterClass}}</span>
+                </dd>
+                <dt><span>Background</span></dt>
+                <dd>
+                    <span>{{characterSheet.background}}</span>
+                </dd>
+                <dt><span>Player Name</span></dt>
+                <dd>
+                    <span>{{characterSheet.playerName}}</span>
+                </dd>
+                <dt><span>Race</span></dt>
+                <dd>
+                    <span>{{characterSheet.race}}</span>
+                </dd>
+                <dt><span>Alignment</span></dt>
+                <dd>
+                    <span>{{characterSheet.alignment}}</span>
+                </dd>
+                <dt><span>Exp Points</span></dt>
+                <dd>
+                    <span>{{characterSheet.expPoints}}</span>
+                </dd>
+                <dt><span>Strength</span></dt>
+                <dd>
+                    <span>{{characterSheet.strength}}</span>
+                </dd>
+                <dt><span>Dexterity</span></dt>
+                <dd>
+                    <span>{{characterSheet.dexterity}}</span>
+                </dd>
+                <dt><span>Constitution</span></dt>
+                <dd>
+                    <span>{{characterSheet.constitution}}</span>
+                </dd>
+                <dt><span>Intelligence</span></dt>
+                <dd>
+                    <span>{{characterSheet.intelligence}}</span>
+                </dd>
+                <dt><span>Wisdom</span></dt>
+                <dd>
+                    <span>{{characterSheet.wisdom}}</span>
+                </dd>
+                <dt><span>Charisma</span></dt>
+                <dd>
+                    <span>{{characterSheet.charisma}}</span>
+                </dd>
+                <dt><span>Inspiration</span></dt>
+                <dd>
+                    <span>{{characterSheet.inspiration}}</span>
+                </dd>
+                <dt><span>Proficiency Bonus</span></dt>
+                <dd>
+                    <span>{{characterSheet.proficiencyBonus}}</span>
+                </dd>
+                <dt><span>Str Saving Throw</span></dt>
+                <dd>
+                    <span>{{characterSheet.strSavingThrow}}</span>
+                </dd>
+                <dt><span>Dex Saving Throw</span></dt>
+                <dd>
+                    <span>{{characterSheet.dexSavingThrow}}</span>
+                </dd>
+                <dt><span>Const Saving Throw</span></dt>
+                <dd>
+                    <span>{{characterSheet.constSavingThrow}}</span>
+                </dd>
+                <dt><span>Int Saving Throw</span></dt>
+                <dd>
+                    <span>{{characterSheet.intSavingThrow}}</span>
+                </dd>
+                <dt><span>Wis Saving Throw</span></dt>
+                <dd>
+                    <span>{{characterSheet.wisSavingThrow}}</span>
+                </dd>
+                <dt><span>Char Saving Throw</span></dt>
+                <dd>
+                    <span>{{characterSheet.charSavingThrow}}</span>
+                </dd>
+                <dt><span>Acrobatics</span></dt>
+                <dd>
+                    <span>{{characterSheet.acrobatics}}</span>
+                </dd>
+                <dt><span>Animal Handling</span></dt>
+                <dd>
+                    <span>{{characterSheet.animalHandling}}</span>
+                </dd>
+                <dt><span>Arcana</span></dt>
+                <dd>
+                    <span>{{characterSheet.arcana}}</span>
+                </dd>
+                <dt><span>Athletics</span></dt>
+                <dd>
+                    <span>{{characterSheet.athletics}}</span>
+                </dd>
+                <dt><span>Deception</span></dt>
+                <dd>
+                    <span>{{characterSheet.deception}}</span>
+                </dd>
+                <dt><span>History</span></dt>
+                <dd>
+                    <span>{{characterSheet.history}}</span>
+                </dd>
+                <dt><span>Insight</span></dt>
+                <dd>
+                    <span>{{characterSheet.insight}}</span>
+                </dd>
+                <dt><span>Intimidation</span></dt>
+                <dd>
+                    <span>{{characterSheet.intimidation}}</span>
+                </dd>
+                <dt><span>Investigation</span></dt>
+                <dd>
+                    <span>{{characterSheet.investigation}}</span>
+                </dd>
+                <dt><span>Medicine</span></dt>
+                <dd>
+                    <span>{{characterSheet.medicine}}</span>
+                </dd>
+                <dt><span>Nature</span></dt>
+                <dd>
+                    <span>{{characterSheet.nature}}</span>
+                </dd>
+                <dt><span>Perception</span></dt>
+                <dd>
+                    <span>{{characterSheet.perception}}</span>
+                </dd>
+                <dt><span>Performance</span></dt>
+                <dd>
+                    <span>{{characterSheet.performance}}</span>
+                </dd>
+                <dt><span>Persuasion</span></dt>
+                <dd>
+                    <span>{{characterSheet.persuasion}}</span>
+                </dd>
+                <dt><span>Religion</span></dt>
+                <dd>
+                    <span>{{characterSheet.religion}}</span>
+                </dd>
+                <dt><span>Sleight Of Hand</span></dt>
+                <dd>
+                    <span>{{characterSheet.sleightOfHand}}</span>
+                </dd>
+                <dt><span>Stealth</span></dt>
+                <dd>
+                    <span>{{characterSheet.stealth}}</span>
+                </dd>
+                <dt><span>Survival</span></dt>
+                <dd>
+                    <span>{{characterSheet.survival}}</span>
+                </dd>
+                <dt><span>Passive Wisdom Perception</span></dt>
+                <dd>
+                    <span>{{characterSheet.passiveWisdomPerception}}</span>
+                </dd>
+                <dt><span>Armor Class</span></dt>
+                <dd>
+                    <span>{{characterSheet.armorClass}}</span>
+                </dd>
+                <dt><span>Initiative</span></dt>
+                <dd>
+                    <span>{{characterSheet.initiative}}</span>
+                </dd>
+                <dt><span>Speed</span></dt>
+                <dd>
+                    <span>{{characterSheet.speed}}</span>
+                </dd>
+                <dt><span>Hp Maximum</span></dt>
+                <dd>
+                    <span>{{characterSheet.hpMaximum}}</span>
+                </dd>
+                <dt><span>Current HP</span></dt>
+                <dd>
+                    <span>{{characterSheet.currentHP}}</span>
+                </dd>
+                <dt><span>Temporary HP</span></dt>
+                <dd>
+                    <span>{{characterSheet.temporaryHP}}</span>
+                </dd>
+                <dt><span>Hit Dice</span></dt>
+                <dd>
+                    <span>{{characterSheet.hitDice}}</span>
+                </dd>
+                <dt><span>Death Save Success</span></dt>
+                <dd>
+                    <span>{{characterSheet.deathSaveSuccess}}</span>
+                </dd>
+                <dt><span>Death Save Fail</span></dt>
+                <dd>
+                    <span>{{characterSheet.deathSaveFail}}</span>
+                </dd>
+                <dt><span>Other Proficiencies And Languages</span></dt>
+                <dd>
+                    <span>{{characterSheet.otherProficienciesAndLanguages}}</span>
+                </dd>
+                <dt><span>Copper Pieces</span></dt>
+                <dd>
+                    <span>{{characterSheet.copperPieces}}</span>
+                </dd>
+                <dt><span>Silver Pieces</span></dt>
+                <dd>
+                    <span>{{characterSheet.silverPieces}}</span>
+                </dd>
+                <dt><span>Electrum Pieces</span></dt>
+                <dd>
+                    <span>{{characterSheet.electrumPieces}}</span>
+                </dd>
+                <dt><span>Gold Pieces</span></dt>
+                <dd>
+                    <span>{{characterSheet.goldPieces}}</span>
+                </dd>
+                <dt><span>Platinum Pieces</span></dt>
+                <dd>
+                    <span>{{characterSheet.platinumPieces}}</span>
+                </dd>
+                <dt><span>Equipment</span></dt>
+                <dd>
+                    <span>{{characterSheet.equipment}}</span>
+                </dd>
+                <dt><span>Features And Traits</span></dt>
+                <dd>
+                    <span>{{characterSheet.featuresAndTraits}}</span>
+                </dd>
+                <dt><span>Attacks And Spell Casting</span></dt>
+                <dd>
+                    <span>{{characterSheet.attacksAndSpellCasting}}</span>
+                </dd>
+                <dt><span>Allies And Organizations</span></dt>
+                <dd>
+                    <span>{{characterSheet.alliesAndOrganizations}}</span>
+                </dd>
+                <dt><span>Additional Features And Traits</span></dt>
+                <dd>
+                    <span>{{characterSheet.additionalFeaturesAndTraits}}</span>
+                </dd>
+                <dt><span>Treasure</span></dt>
+                <dd>
+                    <span>{{characterSheet.treasure}}</span>
+                </dd>
+                <dt><span>Character Backstory</span></dt>
+                <dd>
+                    <span>{{characterSheet.characterBackstory}}</span>
+                </dd>
+                <dt><span>Age</span></dt>
+                <dd>
+                    <span>{{characterSheet.age}}</span>
+                </dd>
+                <dt><span>Height</span></dt>
+                <dd>
+                    <span>{{characterSheet.height}}</span>
+                </dd>
+                <dt><span>Weight</span></dt>
+                <dd>
+                    <span>{{characterSheet.weight}}</span>
+                </dd>
+                <dt><span>Eyes</span></dt>
+                <dd>
+                    <span>{{characterSheet.eyes}}</span>
+                </dd>
+                <dt><span>Skin</span></dt>
+                <dd>
+                    <span>{{characterSheet.skin}}</span>
+                </dd>
+                <dt><span>Hair</span></dt>
+                <dd>
+                    <span>{{characterSheet.hair}}</span>
+                </dd>
+                <dt><span>Spell Casting Class</span></dt>
+                <dd>
+                    <span>{{characterSheet.spellCastingClass}}</span>
+                </dd>
+                <dt><span>Spell Casting Ability</span></dt>
+                <dd>
+                    <span>{{characterSheet.spellCastingAbility}}</span>
+                </dd>
+                <dt><span>Spell Save DC</span></dt>
+                <dd>
+                    <span>{{characterSheet.spellSaveDC}}</span>
+                </dd>
+                <dt><span>Spell Attack Bonus</span></dt>
+                <dd>
+                    <span>{{characterSheet.spellAttackBonus}}</span>
+                </dd>
+                <dt><span>Character</span></dt>
+                <dd>
+                    <div *ngIf="characterSheet.character">
+                        <a [routerLink]="['/spell-book', characterSheet.character?.id, 'view']">{{characterSheet.character?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/character-sheet', characterSheet.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
