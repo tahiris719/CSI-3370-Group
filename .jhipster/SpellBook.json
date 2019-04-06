@@ -11,7 +11,7 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20190406175815",
+    "changelogDate": "20190406191124",
     "entityTableName": "spell_book",
     "dto": "no",
     "pagination": "no",

@@ -19,15 +19,6 @@ spring:
         name: DungeonsAndDatabases
     cache:
         type: simple
-    cloud:
-        stream:
-            kafka:
-                binder:
-                    brokers: localhost
-                    zk-nodes: localhost
-            bindings:
-                output:
-                    destination: topic-jhipster
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
         url: jdbc:h2:mem:DungeonsAndDatabases;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
@@ -101,7 +92,7 @@ jhipster:
         authentication:
             jwt:
                 # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-                base64-secret: NzQ1OWQ0YTVjZGQ3NGU2ZmRmYzEzYzA0NjcwOGMxNTZiNmY1MGEzZDcxMTY0ZWFjM2JhM2I2OTRkODQ4NzkxYmMwNzc5ZDk0NDVmNzBmYmVkNWEwZDQzYzI2ZmFhMTkzYjExZDBkNWZhNTlmNzZhOGRiYmFkYzUzYzFlODIxNzA=
+                base64-secret: YTE2NTRkYjU4YjY2ZWNmMzk3ZWViMzc0YWMwNDY3MTJmMjYxOWUyZjE3OTZjNzIwYWZiYTZlYWNmOTg3ZjEyZGRlMDJlMWM1NDI3YTRhMmRkOTE2MmJiNjBmZDc1OTJjMzZiNzM4Nzk3ODM3ZWNjOTdmNTdhNDdjN2E2ZjExYjA=
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
     metrics:
