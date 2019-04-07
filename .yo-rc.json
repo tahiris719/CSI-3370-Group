@@ -1,0 +1,40 @@
+{
+    "generator-jhipster": {
+        "promptValues": {
+            "packageName": "com.csi3370.dnd"
+        },
+        "jhipsterVersion": "5.8.2",
+        "applicationType": "monolith",
+        "baseName": "DungeonsAndDatabases",
+        "packageName": "com.csi3370.dnd",
+        "packageFolder": "com/csi3370/dnd",
+        "serverPort": "8080",
+        "authenticationType": "jwt",
+        "cacheProvider": "ehcache",
+        "enableHibernateCache": true,
+        "websocket": "spring-websocket",
+        "databaseType": "sql",
+        "devDatabaseType": "h2Disk",
+        "prodDatabaseType": "mysql",
+        "searchEngine": "elasticsearch",
+        "messageBroker": false,
+        "serviceDiscoveryType": false,
+        "buildTool": "maven",
+        "enableSwaggerCodegen": false,
+        "jwtSecretKey": "NjBiMzUxZDM3MGUzZDFlNTMyMWEzZTc2MTUxYTFjNzI1ODIwNDkxYWM3YTVmNWJiYmEyZmE4ZGQ1ZTgxOWQ1MzQ4YTY4NjEyZDlkM2VjYTZhMzIyYTc3YzIwYjZiOTQxODc2NmRmMGU0YjdkNDFlYTY5ODI0MTJkZGExMjNkYWE=",
+        "clientFramework": "angularX",
+        "useSass": true,
+        "clientPackageManager": "npm",
+        "testFrameworks": [],
+        "jhiPrefix": "jhi",
+        "entitySuffix": "",
+        "dtoSuffix": "DTO",
+        "otherModules": [
+            {
+                "name": "generator-jhipster-spring-cloud-stream",
+                "version": "1.0.0"
+            }
+        ],
+        "enableTranslation": false
+    }
+}

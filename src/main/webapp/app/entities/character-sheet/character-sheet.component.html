@@ -1,0 +1,223 @@
+<div>
+    <h2 id="page-heading">
+        <span>Character Sheets</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-character-sheet" [routerLink]="['/character-sheet/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span class="hidden-sm-down" >
+            Create new Character Sheet
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="Query">
+                    <button class="input-group-append btn btn-info" (click)="search(currentSearch)">
+                        <fa-icon [icon]="'search'"></fa-icon>
+                    </button>
+                    <button class="input-group-append btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <fa-icon [icon]="'trash-alt'"></fa-icon>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="characterSheets">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span>ID</span></th>
+            <th><span>Created Date</span></th>
+            <th><span>Created By</span></th>
+            <th><span>Search Tags</span></th>
+            <th><span>Character Name</span></th>
+            <th><span>Character Class</span></th>
+            <th><span>Background</span></th>
+            <th><span>Player Name</span></th>
+            <th><span>Race</span></th>
+            <th><span>Alignment</span></th>
+            <th><span>Exp Points</span></th>
+            <th><span>Strength</span></th>
+            <th><span>Dexterity</span></th>
+            <th><span>Constitution</span></th>
+            <th><span>Intelligence</span></th>
+            <th><span>Wisdom</span></th>
+            <th><span>Charisma</span></th>
+            <th><span>Inspiration</span></th>
+            <th><span>Proficiency Bonus</span></th>
+            <th><span>Str Saving Throw</span></th>
+            <th><span>Dex Saving Throw</span></th>
+            <th><span>Const Saving Throw</span></th>
+            <th><span>Int Saving Throw</span></th>
+            <th><span>Wis Saving Throw</span></th>
+            <th><span>Char Saving Throw</span></th>
+            <th><span>Acrobatics</span></th>
+            <th><span>Animal Handling</span></th>
+            <th><span>Arcana</span></th>
+            <th><span>Athletics</span></th>
+            <th><span>Deception</span></th>
+            <th><span>History</span></th>
+            <th><span>Insight</span></th>
+            <th><span>Intimidation</span></th>
+            <th><span>Investigation</span></th>
+            <th><span>Medicine</span></th>
+            <th><span>Nature</span></th>
+            <th><span>Perception</span></th>
+            <th><span>Performance</span></th>
+            <th><span>Persuasion</span></th>
+            <th><span>Religion</span></th>
+            <th><span>Sleight Of Hand</span></th>
+            <th><span>Stealth</span></th>
+            <th><span>Survival</span></th>
+            <th><span>Passive Wisdom Perception</span></th>
+            <th><span>Armor Class</span></th>
+            <th><span>Initiative</span></th>
+            <th><span>Speed</span></th>
+            <th><span>Hp Maximum</span></th>
+            <th><span>Current HP</span></th>
+            <th><span>Temporary HP</span></th>
+            <th><span>Hit Dice</span></th>
+            <th><span>Death Save Success</span></th>
+            <th><span>Death Save Fail</span></th>
+            <th><span>Other Proficiencies And Languages</span></th>
+            <th><span>Copper Pieces</span></th>
+            <th><span>Silver Pieces</span></th>
+            <th><span>Electrum Pieces</span></th>
+            <th><span>Gold Pieces</span></th>
+            <th><span>Platinum Pieces</span></th>
+            <th><span>Equipment</span></th>
+            <th><span>Features And Traits</span></th>
+            <th><span>Attacks And Spell Casting</span></th>
+            <th><span>Allies And Organizations</span></th>
+            <th><span>Additional Features And Traits</span></th>
+            <th><span>Treasure</span></th>
+            <th><span>Character Backstory</span></th>
+            <th><span>Age</span></th>
+            <th><span>Height</span></th>
+            <th><span>Weight</span></th>
+            <th><span>Eyes</span></th>
+            <th><span>Skin</span></th>
+            <th><span>Hair</span></th>
+            <th><span>Spell Casting Class</span></th>
+            <th><span>Spell Casting Ability</span></th>
+            <th><span>Spell Save DC</span></th>
+            <th><span>Spell Attack Bonus</span></th>
+            <th><span>Character</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let characterSheet of characterSheets ;trackBy: trackId">
+                <td><a [routerLink]="['/character-sheet', characterSheet.id, 'view' ]">{{characterSheet.id}}</a></td>
+                <td>{{characterSheet.createdDate}}</td>
+                <td>{{characterSheet.createdBy}}</td>
+                <td>{{characterSheet.searchTags}}</td>
+                <td>{{characterSheet.characterName}}</td>
+                <td>{{characterSheet.characterClass}}</td>
+                <td>{{characterSheet.background}}</td>
+                <td>{{characterSheet.playerName}}</td>
+                <td>{{characterSheet.race}}</td>
+                <td>{{characterSheet.alignment}}</td>
+                <td>{{characterSheet.expPoints}}</td>
+                <td>{{characterSheet.strength}}</td>
+                <td>{{characterSheet.dexterity}}</td>
+                <td>{{characterSheet.constitution}}</td>
+                <td>{{characterSheet.intelligence}}</td>
+                <td>{{characterSheet.wisdom}}</td>
+                <td>{{characterSheet.charisma}}</td>
+                <td>{{characterSheet.inspiration}}</td>
+                <td>{{characterSheet.proficiencyBonus}}</td>
+                <td>{{characterSheet.strSavingThrow}}</td>
+                <td>{{characterSheet.dexSavingThrow}}</td>
+                <td>{{characterSheet.constSavingThrow}}</td>
+                <td>{{characterSheet.intSavingThrow}}</td>
+                <td>{{characterSheet.wisSavingThrow}}</td>
+                <td>{{characterSheet.charSavingThrow}}</td>
+                <td>{{characterSheet.acrobatics}}</td>
+                <td>{{characterSheet.animalHandling}}</td>
+                <td>{{characterSheet.arcana}}</td>
+                <td>{{characterSheet.athletics}}</td>
+                <td>{{characterSheet.deception}}</td>
+                <td>{{characterSheet.history}}</td>
+                <td>{{characterSheet.insight}}</td>
+                <td>{{characterSheet.intimidation}}</td>
+                <td>{{characterSheet.investigation}}</td>
+                <td>{{characterSheet.medicine}}</td>
+                <td>{{characterSheet.nature}}</td>
+                <td>{{characterSheet.perception}}</td>
+                <td>{{characterSheet.performance}}</td>
+                <td>{{characterSheet.persuasion}}</td>
+                <td>{{characterSheet.religion}}</td>
+                <td>{{characterSheet.sleightOfHand}}</td>
+                <td>{{characterSheet.stealth}}</td>
+                <td>{{characterSheet.survival}}</td>
+                <td>{{characterSheet.passiveWisdomPerception}}</td>
+                <td>{{characterSheet.armorClass}}</td>
+                <td>{{characterSheet.initiative}}</td>
+                <td>{{characterSheet.speed}}</td>
+                <td>{{characterSheet.hpMaximum}}</td>
+                <td>{{characterSheet.currentHP}}</td>
+                <td>{{characterSheet.temporaryHP}}</td>
+                <td>{{characterSheet.hitDice}}</td>
+                <td>{{characterSheet.deathSaveSuccess}}</td>
+                <td>{{characterSheet.deathSaveFail}}</td>
+                <td>{{characterSheet.otherProficienciesAndLanguages}}</td>
+                <td>{{characterSheet.copperPieces}}</td>
+                <td>{{characterSheet.silverPieces}}</td>
+                <td>{{characterSheet.electrumPieces}}</td>
+                <td>{{characterSheet.goldPieces}}</td>
+                <td>{{characterSheet.platinumPieces}}</td>
+                <td>{{characterSheet.equipment}}</td>
+                <td>{{characterSheet.featuresAndTraits}}</td>
+                <td>{{characterSheet.attacksAndSpellCasting}}</td>
+                <td>{{characterSheet.alliesAndOrganizations}}</td>
+                <td>{{characterSheet.additionalFeaturesAndTraits}}</td>
+                <td>{{characterSheet.treasure}}</td>
+                <td>{{characterSheet.characterBackstory}}</td>
+                <td>{{characterSheet.age}}</td>
+                <td>{{characterSheet.height}}</td>
+                <td>{{characterSheet.weight}}</td>
+                <td>{{characterSheet.eyes}}</td>
+                <td>{{characterSheet.skin}}</td>
+                <td>{{characterSheet.hair}}</td>
+                <td>{{characterSheet.spellCastingClass}}</td>
+                <td>{{characterSheet.spellCastingAbility}}</td>
+                <td>{{characterSheet.spellSaveDC}}</td>
+                <td>{{characterSheet.spellAttackBonus}}</td>
+                <td>
+                    <div *ngIf="characterSheet.character">
+                        <a [routerLink]="['../spell-book', characterSheet.character?.id, 'view' ]" >{{characterSheet.character?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/character-sheet', characterSheet.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/character-sheet', characterSheet.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'character-sheet', { outlets: { popup: characterSheet.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
