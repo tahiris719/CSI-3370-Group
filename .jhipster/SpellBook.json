@@ -1,0 +1,23 @@
+{
+    "name": "SpellBook",
+    "fields": [
+        {
+            "fieldName": "maxSlots",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "currentSlots",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190407175115",
+    "entityTableName": "spell_book",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
