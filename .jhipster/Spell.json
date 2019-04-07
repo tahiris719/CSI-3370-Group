@@ -1,5 +1,7 @@
 {
-    "name": "Spell",
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
     "fields": [
         {
             "fieldName": "book",
@@ -36,16 +38,18 @@
         {
             "fieldName": "description",
             "fieldType": "String"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
         }
     ],
-    "relationships": [],
     "changelogDate": "20190407175116",
-    "entityTableName": "spell",
     "dto": "no",
-    "pagination": "no",
+    "searchEngine": "elasticsearch",
     "service": "no",
+    "entityTableName": "spell",
+    "databaseType": "sql",
     "jpaMetamodelFiltering": false,
-    "fluentMethods": true,
-    "clientRootFolder": "",
-    "applications": "*"
+    "pagination": "no"
 }

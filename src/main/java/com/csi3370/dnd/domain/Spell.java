@@ -52,6 +52,9 @@ public class Spell implements Serializable {
     @Column(name = "description")
     private String description;
 
+    @Column(name = "name")
+    private String name;
+
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
         return id;
@@ -177,6 +180,19 @@ public class Spell implements Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public Spell name(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
@@ -212,6 +228,7 @@ public class Spell implements Serializable {
             ", duration='" + getDuration() + "'" +
             ", classes='" + getClasses() + "'" +
             ", description='" + getDescription() + "'" +
+            ", name='" + getName() + "'" +
             "}";
     }
 }
