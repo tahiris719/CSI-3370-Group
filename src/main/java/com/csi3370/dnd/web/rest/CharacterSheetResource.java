@@ -90,7 +90,8 @@ public class CharacterSheetResource {
     @GetMapping("/character-sheets")
     public List<CharacterSheet> getAllCharacterSheets() {
         log.debug("REST request to get all CharacterSheets");
-        return characterSheetRepository.findAll();
+       // return characterSheetRepository.findAll();
+	   return characterSheetRepository.findByUserIsCurrentUser();
     }
 
     /**

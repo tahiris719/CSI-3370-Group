@@ -90,7 +90,8 @@ public class SpellBookResource {
     @GetMapping("/spell-books")
     public List<SpellBook> getAllSpellBooks() {
         log.debug("REST request to get all SpellBooks");
-        return spellBookRepository.findAll();
+        //return spellBookRepository.findAll();
+		return spellBookRepository.findByUserIsCurrentUser();
     }
 
     /**
