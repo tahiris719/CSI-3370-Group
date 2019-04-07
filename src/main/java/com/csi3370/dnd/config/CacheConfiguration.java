@@ -40,7 +40,6 @@ public class CacheConfiguration {
             cm.createCache(com.csi3370.dnd.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(com.csi3370.dnd.domain.CharacterSheet.class.getName(), jcacheConfiguration);
             cm.createCache(com.csi3370.dnd.domain.SpellBook.class.getName(), jcacheConfiguration);
-            cm.createCache(com.csi3370.dnd.domain.Spell.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
