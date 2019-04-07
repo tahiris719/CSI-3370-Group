@@ -21,19 +21,7 @@ describe('Service Tests', () => {
             service = injector.get(SpellService);
             httpMock = injector.get(HttpTestingController);
 
-            elemDefault = new Spell(
-                0,
-                'AAAAAAA',
-                0,
-                'AAAAAAA',
-                'AAAAAAA',
-                'AAAAAAA',
-                'AAAAAAA',
-                'AAAAAAA',
-                'AAAAAAA',
-                'AAAAAAA',
-                'AAAAAAA'
-            );
+            elemDefault = new Spell(0, 'AAAAAAA', 0, 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 'AAAAAAA');
         });
 
         describe('Service methods', async () => {
@@ -75,8 +63,7 @@ describe('Service Tests', () => {
                         components: 'BBBBBB',
                         duration: 'BBBBBB',
                         classes: 'BBBBBB',
-                        description: 'BBBBBB',
-                        name: 'BBBBBB'
+                        description: 'BBBBBB'
                     },
                     elemDefault
                 );
@@ -101,8 +88,7 @@ describe('Service Tests', () => {
                         components: 'BBBBBB',
                         duration: 'BBBBBB',
                         classes: 'BBBBBB',
-                        description: 'BBBBBB',
-                        name: 'BBBBBB'
+                        description: 'BBBBBB'
                     },
                     elemDefault
                 );

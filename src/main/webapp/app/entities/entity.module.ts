@@ -19,6 +19,30 @@ import { RouterModule } from '@angular/router';
             {
                 path: 'spell',
                 loadChildren: './spell/spell.module#DungeonsandDatabasesSpellModule'
+            },
+            {
+                path: 'spell',
+                loadChildren: './spell/spell.module#DungeonsandDatabasesSpellModule'
+            },
+            {
+                path: 'spell',
+                loadChildren: './spell/spell.module#DungeonsandDatabasesSpellModule'
+            },
+            {
+                path: 'spell',
+                loadChildren: './spell/spell.module#DungeonsandDatabasesSpellModule'
+            },
+            {
+                path: 'spell',
+                loadChildren: './spell/spell.module#DungeonsandDatabasesSpellModule'
+            },
+            {
+                path: 'spell',
+                loadChildren: './spell/spell.module#DungeonsandDatabasesSpellModule'
+            },
+            {
+                path: 'spell',
+                loadChildren: './spell/spell.module#DungeonsandDatabasesSpellModule'
             }
             /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
         ])

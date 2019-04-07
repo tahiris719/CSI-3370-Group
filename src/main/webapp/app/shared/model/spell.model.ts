@@ -9,7 +9,6 @@ export interface ISpell {
     duration?: string;
     classes?: string;
     description?: string;
-    name?: string;
 }
 
 export class Spell implements ISpell {
@@ -23,7 +22,6 @@ export class Spell implements ISpell {
         public components?: string,
         public duration?: string,
         public classes?: string,
-        public description?: string,
-        public name?: string
+        public description?: string
     ) {}
 }

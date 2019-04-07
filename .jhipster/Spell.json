@@ -38,10 +38,6 @@
         {
             "fieldName": "description",
             "fieldType": "String"
-        },
-        {
-            "fieldName": "name",
-            "fieldType": "String"
         }
     ],
     "changelogDate": "20190407175116",

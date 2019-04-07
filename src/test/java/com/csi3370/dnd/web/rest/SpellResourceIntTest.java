@@ -71,9 +71,6 @@ public class SpellResourceIntTest {
     private static final String DEFAULT_DESCRIPTION = "AAAAAAAAAA";
     private static final String UPDATED_DESCRIPTION = "BBBBBBBBBB";
 
-    private static final String DEFAULT_NAME = "AAAAAAAAAA";
-    private static final String UPDATED_NAME = "BBBBBBBBBB";
-
     @Autowired
     private SpellRepository spellRepository;
 
@@ -132,8 +129,7 @@ public class SpellResourceIntTest {
             .components(DEFAULT_COMPONENTS)
             .duration(DEFAULT_DURATION)
             .classes(DEFAULT_CLASSES)
-            .description(DEFAULT_DESCRIPTION)
-            .name(DEFAULT_NAME);
+            .description(DEFAULT_DESCRIPTION);
         return spell;
     }
 
@@ -166,7 +162,6 @@ public class SpellResourceIntTest {
         assertThat(testSpell.getDuration()).isEqualTo(DEFAULT_DURATION);
         assertThat(testSpell.getClasses()).isEqualTo(DEFAULT_CLASSES);
         assertThat(testSpell.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
-        assertThat(testSpell.getName()).isEqualTo(DEFAULT_NAME);
 
         // Validate the Spell in Elasticsearch
         verify(mockSpellSearchRepository, times(1)).save(testSpell);
@@ -213,8 +208,7 @@ public class SpellResourceIntTest {
             .andExpect(jsonPath("$.[*].components").value(hasItem(DEFAULT_COMPONENTS.toString())))
             .andExpect(jsonPath("$.[*].duration").value(hasItem(DEFAULT_DURATION.toString())))
             .andExpect(jsonPath("$.[*].classes").value(hasItem(DEFAULT_CLASSES.toString())))
-            .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())))
-            .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME.toString())));
+            .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION.toString())));
     }
     
     @Test
@@ -236,8 +230,7 @@ public class SpellResourceIntTest {
             .andExpect(jsonPath("$.components").value(DEFAULT_COMPONENTS.toString()))
             .andExpect(jsonPath("$.duration").value(DEFAULT_DURATION.toString()))
             .andExpect(jsonPath("$.classes").value(DEFAULT_CLASSES.toString()))
-            .andExpect(jsonPath("$.description").value(DEFAULT_DESCRIPTION.toString()))
-            .andExpect(jsonPath("$.name").value(DEFAULT_NAME.toString()));
+            .andExpect(jsonPath("$.description").value(DEFAULT_DESCRIPTION.toString()));
     }
 
     @Test
@@ -269,8 +262,7 @@ public class SpellResourceIntTest {
             .components(UPDATED_COMPONENTS)
             .duration(UPDATED_DURATION)
             .classes(UPDATED_CLASSES)
-            .description(UPDATED_DESCRIPTION)
-            .name(UPDATED_NAME);
+            .description(UPDATED_DESCRIPTION);
 
         restSpellMockMvc.perform(put("/api/spells")
             .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -290,7 +282,6 @@ public class SpellResourceIntTest {
         assertThat(testSpell.getDuration()).isEqualTo(UPDATED_DURATION);
         assertThat(testSpell.getClasses()).isEqualTo(UPDATED_CLASSES);
         assertThat(testSpell.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
-        assertThat(testSpell.getName()).isEqualTo(UPDATED_NAME);
 
         // Validate the Spell in Elasticsearch
         verify(mockSpellSearchRepository, times(1)).save(testSpell);
@@ -358,8 +349,7 @@ public class SpellResourceIntTest {
             .andExpect(jsonPath("$.[*].components").value(hasItem(DEFAULT_COMPONENTS)))
             .andExpect(jsonPath("$.[*].duration").value(hasItem(DEFAULT_DURATION)))
             .andExpect(jsonPath("$.[*].classes").value(hasItem(DEFAULT_CLASSES)))
-            .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION)))
-            .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME)));
+            .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION)));
     }
 
     @Test
