@@ -1,116 +1,176 @@
-enum CharacterClassEnum{
-    BARBARIAN, BARD, CLERIC, DRUID, FIGHTER, MONK, PALADIN, RANGER, ROGUE, SORCERER, WARLOCK, WIZARD
+// JDL definition for application 'DungeonsAndDatabases' generated with command 'jhipster export-jdl'
+
+entity CharacterSheet {
+  createdDate String,
+  createdBy String,
+  searchKeywords String,
+  characterName String,
+  characterClass CharacterClassEnum,
+  background BackgroundEnum,
+  playerName String,
+  race RaceEnum,
+  alignment AlignmentEnum,
+  expPoints Integer,
+  strength Integer,
+  dexterity Integer,
+  constitution Integer,
+  intelligence Integer,
+  wisdom Integer,
+  charisma Integer,
+  inspiration Integer,
+  proficiencyBonus Integer,
+  strSavingThrow Integer,
+  dexSavingThrow Integer,
+  constSavingThrow Integer,
+  intSavingThrow Integer,
+  wisSavingThrow Integer,
+  charSavingThrow Integer,
+  acrobatics Integer,
+  animalHandling Integer,
+  arcana Integer,
+  athletics Integer,
+  deception Integer,
+  history Integer,
+  insight Integer,
+  intimidation Integer,
+  investigation Integer,
+  medicine Integer,
+  nature Integer,
+  perception Integer,
+  performance Integer,
+  persuasion Integer,
+  religion Integer,
+  sleightOfHand Integer,
+  stealth Integer,
+  survival Integer,
+  passiveWisdomPerception Integer,
+  armorClass Integer,
+  initiative Integer,
+  speed Integer,
+  maxHP Integer,
+  currentHP Integer,
+  temporaryHP Integer,
+  hitDice DiceEnum,
+  deathSaveSuccess DeathSaveSuccessEnum,
+  deathSaveFail DeathSaveFailEnum,
+  otherProficienciesAndLanguages String,
+  copperPieces Integer,
+  silverPieces Integer,
+  electrumPieces Integer,
+  goldPieces Integer,
+  platinumPieces Integer,
+  equipment String,
+  featuresAndTraits String,
+  attacksAndSpellCasting String,
+  alliesAndOrganizations String,
+  additionalFeaturesAndTraits String,
+  treasure String,
+  characterBackstory String,
+  age Integer,
+  height String,
+  weight String,
+  eyes String,
+  skin String,
+  hair String,
+  spellCastingClass String,
+  spellCastingAbility Integer,
+  spellSaveDC Integer,
+  spellAttackBonus Integer
+}
+entity SpellBook {
+  maxSpells Integer,
+  spells String
+}
+entity Spell {
+  book String,
+  level Integer,
+  school String,
+  time String,
+  range String,
+  components String,
+  duration String,
+  classes String,
+  description String
 }
 
-enum BackgroundEnum{
-    ACOLYTE, CHARLATAN, CRIMINAL, ENTERTAINER, FOLKHERO, GUILDARTISAN, HERMIT, NOBLE, OUTLANDER, SAGE, SAILOR, SOLDIER, URCHIN
+enum CharacterClassEnum {
+  BARBARIAN,
+  BARD,
+  CLERIC,
+  DRUID,
+  FIGHTER,
+  MONK,
+  PALADIN,
+  RANGER,
+  ROGUE,
+  SORCERER,
+  WARLOCK,
+  WIZARD
 }
 
-enum RaceEnum{
-    DWARF, ELF, HALFLING, HUMAN, DRAGONBORN, GNOME, HALF_ELF, HALF_ORC, TIEFLING
+enum BackgroundEnum {
+  ACOLYTE,
+  CHARLATAN,
+  CRIMINAL,
+  ENTERTAINER,
+  FOLKHERO,
+  GUILDARTISAN,
+  HERMIT,
+  NOBLE,
+  OUTLANDER,
+  SAGE,
+  SAILOR,
+  SOLDIER,
+  URCHIN
 }
 
-enum AlignmentEnum{
-    LAWFUL_GOOD, NUETRAL_GOOD, CHAOTIC_GOOD,
-    LAWFUL_NUETRAL, TRUE_NUETRAL, CHAOTIC_NUETRAL,
-    LAWFUL_EVIL, NEUTRAL_EVIL, CHAOTIC_NUETRAL
+enum RaceEnum {
+  DWARF,
+  ELF,
+  HALFLING,
+  HUMAN,
+  DRAGONBORN,
+  GNOME,
+  HALF_ELF,
+  HALF_ORC,
+  TIEFLING
 }
 
-enum DiceEnum{
-    D4, D6, D8, D12, D10, D20
+enum AlignmentEnum {
+  LAWFUL_GOOD,
+  NUETRAL_GOOD,
+  CHAOTIC_GOOD,
+  LAWFUL_NUETRAL,
+  TRUE_NUETRAL,
+  CHAOTIC_NUETRAL,
+  LAWFUL_EVIL,
+  NEUTRAL_EVIL
 }
 
-enum DeathSaveSuccessEnum{
-    ZERO, ONE, TWO, THREE
+enum DiceEnum {
+  D4,
+  D6,
+  D8,
+  D12,
+  D10,
+  D20
 }
 
-enum DeathSaveFailEnum{
-    ZERO, ONE, TWO, THREE
+enum DeathSaveSuccessEnum {
+  ZERO,
+  ONE,
+  TWO,
+  THREE
 }
 
-entity CharacterSheet{
-    createdDate String
-    createdBy String
-    searchKeywords String
-    characterName String
-    characterClass CharacterClassEnum
-    background BackgroundEnum
-    playerName String
-    race RaceEnum
-      alignment AlignmentEnum
-    expPoints Integer
-    strength Integer
-    dexterity Integer
-    constitution Integer
-    intelligence Integer
-    wisdom Integer
-    charisma Integer
-    inspiration Integer
-    proficiencyBonus Integer
-    strSavingThrow Integer
-    dexSavingThrow Integer
-    constSavingThrow Integer
-    intSavingThrow Integer
-    wisSavingThrow Integer
-    charSavingThrow Integer
-    acrobatics Integer
-    animalHandling Integer
-    arcana Integer
-    athletics Integer
-    deception Integer
-    history Integer
-    insight Integer
-    intimidation Integer
-    investigation Integer
-    medicine Integer
-    nature Integer
-    perception Integer
-    performance Integer
-    persuasion Integer
-    religion Integer
-    sleightOfHand Integer
-    stealth Integer
-    survival Integer
-    passiveWisdomPerception Integer
-    armorClass Integer
-    initiative Integer
-    speed Integer
-    maxHP Integer
-    currentHP Integer
-    temporaryHP Integer
-    hitDice DiceEnum
-    deathSaveSuccess DeathSaveSuccessEnum
-    deathSaveFail DeathSaveFailEnum
-    otherProficienciesAndLanguages String
-    copperPieces Integer
-    silverPieces Integer
-    electrumPieces Integer
-    goldPieces Integer
-    platinumPieces Integer
-    equipment String
-    featuresAndTraits String
-    attacksAndSpellCasting String
-    alliesAndOrganizations String
-    additionalFeaturesAndTraits String
-    treasure String
-    characterBackstory String
-    age Integer
-    height String
-    weight String
-    eyes String
-    skin String
-    hair String
-    spellCastingClass String
-    spellCastingAbility Integer
-    spellSaveDC Integer
-    spellAttackBonus Integer
+enum DeathSaveFailEnum {
+  ZERO,
+  ONE,
+  TWO,
+  THREE
 }
 
-entity SpellBook{
-    maxSpells Integer
-    spells String
+relationship OneToOne {
+  CharacterSheet{character} to SpellBook
 }
 
-relationship OneToOne{
-    CharacterSheet{character} to SpellBook
-}
